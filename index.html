@@ -18,7 +18,7 @@
     }
 
     body {
-      background: #050505;
+      background: #000000;
       color: #ffffff;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
@@ -36,25 +36,25 @@
       top: 0;
       left: 0;
       width: 100%;
-      padding: 25px 7%;
+      padding: 24px 7%;
       display: flex;
       justify-content: flex-end;
-      background: rgba(5, 5, 5, 0.92);
+      background: rgba(0, 0, 0, 0.94);
+      border-bottom: 1px solid #1f1f1f;
       z-index: 100;
-      border-bottom: 1px solid #202020;
     }
 
     nav a {
-      color: #aaa;
-      font-size: 12px;
+      color: #999999;
+      font-size: 11px;
       margin-left: 30px;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #fff;
+      color: #ffffff;
     }
 
 
@@ -66,41 +66,44 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 100px 7% 70px;
+      padding: 80px 7% 60px;
     }
 
     .hero {
       width: 100%;
-      max-width: 1300px;
+      max-width: 1400px;
+      transform: translateY(-45px);
     }
 
     .professional-title {
       font-size: 13px;
       letter-spacing: 4px;
-      color: #aaa;
+      color: #b5b5b5;
       text-transform: uppercase;
-      margin-bottom: 35px;
+      margin-bottom: 42px;
     }
 
     h1 {
-      font-size: clamp(60px, 11vw, 150px);
+      font-size: clamp(60px, 11vw, 155px);
       font-weight: 400;
-      letter-spacing: -5px;
+      letter-spacing: 7px;
       line-height: 0.9;
       margin-bottom: 35px;
+      color: #ffffff;
     }
 
     .psychology-title {
       font-size: 24px;
       font-weight: 400;
       margin-bottom: 8px;
+      color: #ffffff;
     }
 
     .career-path {
-      font-size: 14px;
-      color: #888;
+      font-size: 13px;
+      color: #858585;
       line-height: 1.8;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
 
 
@@ -109,46 +112,46 @@
     .contact-icons {
       display: flex;
       justify-content: center;
-      gap: 22px;
-      margin-top: 35px;
+      gap: 18px;
+      margin-top: 32px;
     }
 
     .contact-icons a {
-      width: 36px;
-      height: 36px;
+      width: 34px;
+      height: 34px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid #444;
+      border: 1px solid #444444;
       border-radius: 50%;
-      color: #fff;
-      transition: 0.3s;
+      color: #ffffff;
+      transition: 0.3s ease;
     }
 
     .contact-icons a:hover {
-      background: #fff;
-      color: #000;
-      border-color: #fff;
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
       transform: translateY(-3px);
     }
 
     .contact-icons svg {
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       fill: currentColor;
     }
 
 
-    /* GENERAL SECTIONS */
+    /* SECTIONS */
 
     section {
       padding: 120px 9%;
-      border-top: 1px solid #202020;
+      border-top: 1px solid #1c1c1c;
     }
 
     .section-number {
-      color: #666;
-      font-size: 11px;
+      color: #555555;
+      font-size: 10px;
       letter-spacing: 3px;
       margin-bottom: 18px;
     }
@@ -171,17 +174,11 @@
     }
 
     .about-text p {
-      margin-bottom: 25px;
+      margin-bottom: 27px;
     }
 
 
     /* PORTFOLIO */
-
-    .portfolio-intro {
-      max-width: 700px;
-      color: #888;
-      margin-bottom: 55px;
-    }
 
     .portfolio-grid {
       display: grid;
@@ -191,35 +188,20 @@
 
     .portfolio-item {
       aspect-ratio: 1 / 1;
-      background: #111;
+      background: #0d0d0d;
       border: 1px solid #292929;
       display: flex;
       align-items: flex-end;
       padding: 30px;
       position: relative;
       overflow: hidden;
-      transition: 0.4s;
-    }
-
-    .portfolio-item::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        135deg,
-        transparent 45%,
-        rgba(255,255,255,0.04)
-      );
-      transition: 0.4s;
+      transition: 0.4s ease;
     }
 
     .portfolio-item:hover {
-      border-color: #777;
+      background: #151515;
+      border-color: #666666;
       transform: translateY(-5px);
-    }
-
-    .portfolio-item:hover::before {
-      background: rgba(255,255,255,0.04);
     }
 
     .portfolio-content {
@@ -228,31 +210,16 @@
     }
 
     .portfolio-number {
-      font-size: 11px;
-      color: #666;
+      font-size: 10px;
+      color: #555555;
       letter-spacing: 2px;
       margin-bottom: 8px;
     }
 
     .portfolio-item h3 {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 400;
-    }
-
-
-    /* EXPERIENCE */
-
-    .experience-list {
-      max-width: 1000px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0 70px;
-    }
-
-    .experience-list div {
-      padding: 15px 0;
-      border-bottom: 1px solid #202020;
-      color: #aaa;
+      color: #ffffff;
     }
 
 
@@ -270,17 +237,17 @@
     }
 
     .education-item span {
-      color: #666;
-      font-size: 14px;
+      color: #666666;
+      font-size: 13px;
     }
 
     .education-item p {
-      color: #888;
+      color: #888888;
       margin-top: 5px;
     }
 
 
-    /* TRAINING */
+    /* SKILLS */
 
     .skills {
       display: flex;
@@ -290,16 +257,16 @@
     }
 
     .skill {
-      border: 1px solid #333;
+      border: 1px solid #333333;
       padding: 9px 16px;
-      color: #aaa;
+      color: #aaaaaa;
       font-size: 13px;
       transition: 0.3s;
     }
 
     .skill:hover {
-      border-color: #888;
-      color: #fff;
+      border-color: #888888;
+      color: #ffffff;
     }
 
 
@@ -310,7 +277,7 @@
     }
 
     .contact-section .contact-icons {
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
 
@@ -318,10 +285,11 @@
 
     footer {
       padding: 40px 9%;
-      border-top: 1px solid #202020;
-      color: #555;
-      font-size: 12px;
+      border-top: 1px solid #1c1c1c;
+      color: #555555;
+      font-size: 11px;
       text-align: center;
+      letter-spacing: 1px;
     }
 
 
@@ -331,27 +299,32 @@
 
       nav {
         justify-content: center;
-        padding: 18px 5px;
+        padding: 17px 5px;
       }
 
       nav a {
-        margin: 0 8px;
+        margin: 0 7px;
         font-size: 9px;
       }
 
       header {
-        padding: 110px 6% 70px;
+        padding: 100px 6% 60px;
+      }
+
+      .hero {
+        transform: translateY(-25px);
       }
 
       .professional-title {
-        font-size: 10px;
+        font-size: 9px;
         letter-spacing: 2px;
         line-height: 1.8;
+        margin-bottom: 32px;
       }
 
       h1 {
-        font-size: 62px;
-        letter-spacing: -3px;
+        font-size: 58px;
+        letter-spacing: 3px;
       }
 
       .psychology-title {
@@ -363,10 +336,6 @@
       }
 
       .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .experience-list {
         grid-template-columns: 1fr;
       }
 
@@ -387,9 +356,9 @@
   <nav>
     <a href="#about">About</a>
     <a href="#portfolio">Portfolio</a>
-    <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </nav>
 
 
@@ -420,7 +389,9 @@
       <div class="contact-icons">
 
         <!-- Instagram -->
-        <a href="https://www.instagram.com/bitanegahdar.ir/" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/bitanegahdar.ir/"
+           target="_blank"
+           aria-label="Instagram">
 
           <svg viewBox="0 0 24 24">
             <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.5 6.5A1 1 0 1 1 16.5 7.5a1 1 0 0 1 1-1z"/>
@@ -430,7 +401,9 @@
 
 
         <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/bita-negahdar/" target="_blank" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/bita-negahdar/"
+           target="_blank"
+           aria-label="LinkedIn">
 
           <svg viewBox="0 0 24 24">
             <path d="M5 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 8h4v13H3V8zm7 0h4v1.8h.1A4.4 4.4 0 0 1 18 7.5c4 0 5 2.6 5 6v7.5h-4v-6.7c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V21h-4V8z"/>
@@ -440,7 +413,8 @@
 
 
         <!-- Email -->
-        <a href="mailto:bitanegahdar@gmail.com" aria-label="Email">
+        <a href="mailto:bitanegahdar@gmail.com"
+           aria-label="Email">
 
           <svg viewBox="0 0 24 24">
             <path d="M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7l-8 5-8-5zm0 3v7h16v-7l-8 5-8-5z"/>
@@ -450,10 +424,11 @@
 
 
         <!-- Phone -->
-        <a href="tel:+989119382619" aria-label="Phone">
+        <a href="tel:+989119382619"
+           aria-label="Phone">
 
           <svg viewBox="0 0 24 24">
-            <path d="M6.6 2h3l1.5 5-2 1.5a15 15 0 0 0 6.4 6.4l1.5-2 5 1.5v3c0 1.1-.9 2-2 2C11.2 19.4 4.6 12.8 4.6 4c0-1.1.9-2 2-2z"/>
+            <path d="M6.6 2h3l1.5 5-2 1.5-2 1.5a15 15 0 0 0 6.4 6.4l1.5-2 5 1.5v3c0 1.1-.9 2-2 2C11.2 19.4 4.6 12.8 4.6 4c0-1.1.9-2 2-2z"/>
           </svg>
 
         </a>
@@ -500,127 +475,49 @@
 
     <h2>Portfolio</h2>
 
-    <p class="portfolio-intro">
-      Selected areas of my work in graphic design, branding,
-      packaging and visual communication.
-    </p>
-
-
     <div class="portfolio-grid">
 
-
       <a href="#" class="portfolio-item">
-
         <div class="portfolio-content">
-
           <div class="portfolio-number">01</div>
-
           <h3>Social Media Design</h3>
-
         </div>
-
       </a>
 
-
       <a href="#" class="portfolio-item">
-
         <div class="portfolio-content">
-
           <div class="portfolio-number">02</div>
-
           <h3>Packaging Design</h3>
-
         </div>
-
       </a>
 
-
       <a href="#" class="portfolio-item">
-
         <div class="portfolio-content">
-
           <div class="portfolio-number">03</div>
-
           <h3>Printing</h3>
-
         </div>
-
       </a>
 
-
       <a href="#" class="portfolio-item">
-
         <div class="portfolio-content">
-
           <div class="portfolio-number">04</div>
-
           <h3>Logo & Visual Identity</h3>
-
         </div>
-
       </a>
 
-
       <a href="#" class="portfolio-item">
-
         <div class="portfolio-content">
-
           <div class="portfolio-number">05</div>
-
           <h3>Creative Design</h3>
-
         </div>
-
       </a>
-
 
       <a href="#" class="portfolio-item">
-
         <div class="portfolio-content">
-
           <div class="portfolio-number">06</div>
-
           <h3>Environmental & Catalog Design</h3>
-
         </div>
-
       </a>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- EXPERIENCE -->
-
-  <section id="experience">
-
-    <div class="section-number">03 — EXPERIENCE</div>
-
-    <h2>Experience</h2>
-
-    <div class="experience-list">
-
-      <div>کانون تبلیغاتی هنر و اندیشه</div>
-      <div>انتشارات مهرگان</div>
-      <div>اوژن اندیشان فن آور — Operating Room Systems</div>
-      <div>پارک علم و فناوری پردیس</div>
-      <div>Alpha Degree Co. — Toronto</div>
-      <div>سامان تهویه ایرانیان</div>
-      <div>داروما پک</div>
-      <div>ایران وب لایف — Design Team Manager</div>
-      <div>خانه گرافیک ایلیای ایرانیان</div>
-      <div>صندوق زیست فناوری</div>
-      <div>آفاق گرافیک</div>
-      <div>رهنوردان هلیای آسمان</div>
-      <div>صدا و سیمای شبکه باران — Set Designer</div>
-      <div>دبیر رشته هنر</div>
-      <div>مجتمع فنی روشنگر</div>
-      <div>مؤسسه چشم‌انداز فردا</div>
-      <div>هنرستان استثنایی باغچه‌بان رشت</div>
-      <div>فنی حرفه‌ای رشت — مدرس و آزمونگر</div>
-      <div>مؤسسه مهر نیکان</div>
 
     </div>
 
@@ -631,64 +528,43 @@
 
   <section id="education">
 
-    <div class="section-number">04 — EDUCATION</div>
+    <div class="section-number">03 — EDUCATION</div>
 
     <h2>Education</h2>
 
-
     <div class="education-item">
-
       <h3>MBA — Strategic Marketing</h3>
-
       <span>2024 – 2025</span>
-
     </div>
 
-
     <div class="education-item">
-
       <h3>MA — Psychology</h3>
-
       <span>2024 – 2026</span>
-
     </div>
 
-
     <div class="education-item">
-
       <h3>MA — Photography</h3>
-
       <span>2014 – 2016</span>
-
       <p>Tehran University of Art</p>
-
     </div>
-
 
     <div class="education-item">
-
       <h3>BA — Graphic Design</h3>
-
       <span>2003 – 2007</span>
-
     </div>
-
 
     <br><br>
-
 
     <h3>Relevant Studies & Training</h3>
 
     <br>
 
     <div class="skills">
-
       <span class="skill">Schema Therapy</span>
       <span class="skill">Cognitive Behavioral Therapy (CBT)</span>
       <span class="skill">QEEG Brain Mapping Workshop</span>
       <span class="skill">Acceptance and Commitment Therapy (ACT)</span>
       <span class="skill">Suicide Crisis Management</span>
-
     </div>
 
   </section>
@@ -698,17 +574,15 @@
 
   <section id="skills">
 
-    <div class="section-number">05 — SKILLS</div>
+    <div class="section-number">04 — SKILLS</div>
 
     <h2>Tools & Skills</h2>
-
 
     <h3>Design & Creative Tools</h3>
 
     <br>
 
     <div class="skills">
-
       <span class="skill">Adobe Photoshop</span>
       <span class="skill">Adobe Illustrator</span>
       <span class="skill">Adobe InDesign</span>
@@ -718,26 +592,21 @@
       <span class="skill">Edius</span>
       <span class="skill">Figma</span>
       <span class="skill">AI Tools</span>
-
     </div>
 
-
     <br><br>
-
 
     <h3>Productivity & Office Tools</h3>
 
     <br>
 
     <div class="skills">
-
       <span class="skill">Microsoft Word</span>
       <span class="skill">Microsoft Excel</span>
       <span class="skill">PowerPoint</span>
       <span class="skill">Google Forms</span>
       <span class="skill">Google Docs</span>
       <span class="skill">Power BI</span>
-
     </div>
 
   </section>
@@ -747,12 +616,11 @@
 
   <section id="contact" class="contact-section">
 
-    <div class="section-number">06 — CONTACT</div>
+    <div class="section-number">05 — CONTACT</div>
 
     <h2>Let's Connect</h2>
 
     <div class="contact-icons">
-
 
       <a href="https://www.instagram.com/bitanegahdar.ir/"
          target="_blank"
@@ -764,7 +632,6 @@
 
       </a>
 
-
       <a href="https://www.linkedin.com/in/bita-negahdar/"
          target="_blank"
          aria-label="LinkedIn">
@@ -775,7 +642,6 @@
 
       </a>
 
-
       <a href="mailto:bitanegahdar@gmail.com"
          aria-label="Email">
 
@@ -785,12 +651,11 @@
 
       </a>
 
-
       <a href="tel:+989119382619"
          aria-label="Phone">
 
         <svg viewBox="0 0 24 24">
-          <path d="M6.6 2h3l1.5 5-2 1.5a15 15 0 0 0 6.4 6.4l1.5-2 5 1.5v3c0 1.1-.9 2-2 2C11.2 19.4 4.6 12.8 4.6 4c0-1.1.9-2 2-2z"/>
+          <path d="M6.6 2h3l1.5 5-1.5 2a15 15 0 0 0 6.4 6.4l2-1.5 5 1.5v3c0 1.1-.9 2-2 2C11.2 19.4 4.6 12.8 4.6 4c0-1.1.9-2 2-2z"/>
         </svg>
 
       </a>
