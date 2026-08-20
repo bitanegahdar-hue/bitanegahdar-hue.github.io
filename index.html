@@ -3,46 +3,280 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bita Negahdar | Designer, Photographer & Psychology Trainee</title>
+
+  <title>Bita Negahdar | Graphic Designer & Brand Consultant</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f6f2;
+      color: #1d1d1d;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 60px 10%;
+    }
+
+    .hero {
+      max-width: 900px;
+    }
+
+    .small-title {
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      color: #666;
+    }
+
+    h1 {
+      font-size: clamp(48px, 9vw, 110px);
+      line-height: 0.95;
+      font-weight: 500;
+      margin-bottom: 35px;
+    }
+
+    .intro {
+      font-size: 22px;
+      max-width: 650px;
+      color: #444;
+    }
+
+    nav {
+      position: absolute;
+      top: 35px;
+      right: 8%;
+    }
+
+    nav a {
+      color: #1d1d1d;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 100px 10%;
+      border-top: 1px solid #ddd;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-weight: 500;
+      margin-bottom: 35px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .card {
+      background: #e9e7e0;
+      padding: 45px;
+      min-height: 240px;
+    }
+
+    .card h3 {
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    .about {
+      max-width: 800px;
+      font-size: 21px;
+    }
+
+    footer {
+      padding: 50px 10%;
+      border-top: 1px solid #ddd;
+      color: #666;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        position: static;
+        padding: 25px 10%;
+      }
+
+      nav a {
+        margin: 0 15px 0 0;
+      }
+
+      header {
+        min-height: 75vh;
+        padding-top: 40px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 10%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#branding">Branding</a>
+    <a href="#psychology">Psychology</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <header>
-    <h1>Bita Negahdar</h1>
-    <p>Designer · Photographer · Psychology Trainee</p>
-  </header>
+    <div class="hero">
+      <div class="small-title">
+        Graphic Designer · Brand Consultant · Psychology Trainee
+      </div>
 
-  <main>
+      <h1>Bita<br>Negahdar</h1>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Designer and photographer with an academic background in photography
-        and psychology, interested in the intersection of visual culture,
+      <p class="intro">
+        I work at the intersection of visual communication,
         branding and human behavior.
       </p>
-    </section>
+    </div>
+  </header>
 
-    <section>
-      <h2>Selected Work</h2>
-      <p>Branding · Graphic Design · Photography · Visual Projects</p>
-    </section>
 
-    <section>
-      <h2>Psychology</h2>
+  <section id="work">
+
+    <h2>Graphic Design</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Visual Identity</h3>
+        <p>
+          Visual systems, identity design and communication
+          strategies for brands.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Packaging Design</h3>
+        <p>
+          Packaging concepts designed around brand identity,
+          audience and visual communication.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Print Design</h3>
+        <p>
+          Editorial, promotional and printed communication
+          materials.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Creative Direction</h3>
+        <p>
+          Developing visual concepts and maintaining consistency
+          across brand touchpoints.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="branding">
+
+    <h2>Branding</h2>
+
+    <div class="about">
       <p>
-        Psychology trainee with an interest in visual perception,
-        human behavior and psychological research.
+        My approach to branding combines visual identity,
+        strategic thinking and an understanding of how people
+        perceive and respond to brands.
       </p>
-    </section>
+    </div>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Email: your-email@example.com</p>
-    </section>
+  </section>
 
-  </main>
+
+  <section id="psychology">
+
+    <h2>Psychology</h2>
+
+    <div class="about">
+      <p>
+        Psychology trainee interested in visual perception,
+        human behavior and the relationship between people,
+        images and brands.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section id="about">
+
+    <h2>About</h2>
+
+    <div class="about">
+      <p>
+        Graphic designer and brand consultant with an academic
+        background in photography and psychology.
+        My work focuses on visual communication, branding,
+        packaging and the psychological dimensions of design.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section id="contact">
+
+    <h2>Contact</h2>
+
+    <div class="about">
+      <p>
+        For collaborations, design projects and professional
+        opportunities, please get in touch.
+      </p>
+
+      <br>
+
+      <p>
+        Email: your-email@example.com
+      </p>
+    </div>
+
+  </section>
+
+
+  <footer>
+    © 2026 Bita Negahdar
+  </footer>
 
 </body>
 </html>
