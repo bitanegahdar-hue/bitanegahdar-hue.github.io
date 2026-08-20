@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bita Negahdar | Graphic Designer & Brand Consultant</title>
+  <title>Bita Negahdar | Graphic Designer · Brand Consultant · Psychology Trainee</title>
 
   <style>
     * {
@@ -13,127 +13,246 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f7f6f2;
       color: #1d1d1d;
-      line-height: 1.6;
-    }
-
-    header {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      padding: 60px 10%;
-    }
-
-    .hero {
-      max-width: 900px;
-    }
-
-    .small-title {
-      font-size: 14px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-      color: #666;
-    }
-
-    h1 {
-      font-size: clamp(48px, 9vw, 110px);
-      line-height: 0.95;
-      font-weight: 500;
-      margin-bottom: 35px;
-    }
-
-    .intro {
-      font-size: 22px;
-      max-width: 650px;
-      color: #444;
+      line-height: 1.7;
     }
 
     nav {
-      position: absolute;
-      top: 35px;
-      right: 8%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 25px 8%;
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(247, 246, 242, 0.95);
+      z-index: 10;
+      border-bottom: 1px solid #e2e0da;
     }
 
     nav a {
       color: #1d1d1d;
       text-decoration: none;
-      margin-left: 25px;
-      font-size: 14px;
+      margin-left: 28px;
+      font-size: 13px;
+      letter-spacing: 0.5px;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 10% 80px;
+    }
+
+    .hero {
+      max-width: 1000px;
+    }
+
+    .small-title {
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: clamp(55px, 10vw, 125px);
+      line-height: 0.9;
+      font-weight: 400;
+      letter-spacing: -5px;
+      margin-bottom: 40px;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      font-size: 23px;
+      color: #444;
+    }
+
+    .hero-subtitle {
+      margin-top: 25px;
+      font-size: 17px;
+      color: #666;
+      max-width: 650px;
+    }
+
     section {
-      padding: 100px 10%;
+      padding: 110px 10%;
       border-top: 1px solid #ddd;
     }
 
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
     h2 {
-      font-size: 42px;
+      font-size: 48px;
+      font-weight: 400;
+      margin-bottom: 40px;
+      letter-spacing: -1px;
+    }
+
+    h3 {
+      font-size: 25px;
       font-weight: 500;
-      margin-bottom: 35px;
+      margin-bottom: 15px;
+    }
+
+    .about-text {
+      max-width: 850px;
+      font-size: 20px;
+      color: #444;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
+      gap: 25px;
     }
 
     .card {
       background: #e9e7e0;
-      padding: 45px;
-      min-height: 240px;
-    }
-
-    .card h3 {
-      font-size: 25px;
-      font-weight: 500;
-      margin-bottom: 15px;
+      padding: 40px;
+      min-height: 230px;
     }
 
     .card p {
       color: #555;
     }
 
-    .about {
-      max-width: 800px;
+    .experience {
+      margin-bottom: 45px;
+      max-width: 900px;
+    }
+
+    .experience-title {
       font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .experience-list {
+      columns: 2;
+      column-gap: 60px;
+      max-width: 950px;
+    }
+
+    .experience-list li {
+      list-style: none;
+      padding: 7px 0;
+      color: #444;
+      break-inside: avoid;
+    }
+
+    .education-item {
+      margin-bottom: 30px;
+      max-width: 800px;
+    }
+
+    .education-item strong {
+      font-size: 19px;
+      font-weight: 500;
+    }
+
+    .date {
+      color: #777;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 950px;
+    }
+
+    .skill {
+      border: 1px solid #bbb;
+      padding: 9px 16px;
+      font-size: 14px;
+    }
+
+    .contact {
+      font-size: 19px;
+    }
+
+    .contact p {
+      margin-bottom: 12px;
+    }
+
+    .contact a {
+      color: #1d1d1d;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
     }
 
     footer {
-      padding: 50px 10%;
+      padding: 45px 10%;
       border-top: 1px solid #ddd;
-      color: #666;
+      color: #777;
+      font-size: 13px;
     }
 
     @media (max-width: 700px) {
+
       nav {
-        position: static;
-        padding: 25px 10%;
+        justify-content: center;
+        padding: 18px 5px;
+        flex-wrap: wrap;
       }
 
       nav a {
-        margin: 0 15px 0 0;
+        margin: 5px 8px;
+        font-size: 11px;
       }
 
       header {
-        min-height: 75vh;
-        padding-top: 40px;
+        padding: 130px 8% 70px;
+      }
+
+      h1 {
+        font-size: 65px;
+        letter-spacing: -3px;
+      }
+
+      .hero-text {
+        font-size: 19px;
+      }
+
+      section {
+        padding: 75px 8%;
+      }
+
+      h2 {
+        font-size: 38px;
       }
 
       .grid {
         grid-template-columns: 1fr;
       }
 
-      section {
-        padding: 70px 10%;
+      .experience-list {
+        columns: 1;
       }
     }
   </style>
@@ -142,30 +261,81 @@
 <body>
 
   <nav>
-    <a href="#work">Work</a>
-    <a href="#branding">Branding</a>
-    <a href="#psychology">Psychology</a>
     <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
+
   <header>
+
     <div class="hero">
+
       <div class="small-title">
         Graphic Designer · Brand Consultant · Psychology Trainee
       </div>
 
-      <h1>Bita<br>Negahdar</h1>
+      <h1>
+        Bita<br>
+        Negahdar
+      </h1>
 
-      <p class="intro">
-        I work at the intersection of visual communication,
-        branding and human behavior.
+      <p class="hero-text">
+        Designer, brand consultant and psychology trainee working
+        across visual communication, branding and human behavior.
       </p>
+
+      <p class="hero-subtitle">
+        Developing a Professional Career Path in Psychology,
+        Counseling, and Human Resources.
+      </p>
+
     </div>
+
   </header>
 
 
-  <section id="work">
+  <section id="about">
+
+    <div class="section-label">01 — About</div>
+
+    <h2>About Me</h2>
+
+    <div class="about-text">
+
+      <p>
+        I am a graphic designer and brand consultant with an
+        academic background in graphic design, photography and
+        psychology.
+      </p>
+
+      <br>
+
+      <p>
+        My professional experience includes graphic design,
+        branding, packaging, visual communication, creative
+        direction and design education.
+      </p>
+
+      <br>
+
+      <p>
+        Alongside my design career, I am developing a professional
+        career path in psychology, counseling and human resources,
+        with a particular interest in human behavior, visual
+        perception and the relationship between people and brands.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="section-label">02 — Design</div>
 
     <h2>Graphic Design</h2>
 
@@ -174,24 +344,17 @@
       <div class="card">
         <h3>Visual Identity</h3>
         <p>
-          Visual systems, identity design and communication
-          strategies for brands.
+          Brand identities, visual systems and communication
+          materials designed around the character and strategy
+          of each brand.
         </p>
       </div>
 
       <div class="card">
         <h3>Packaging Design</h3>
         <p>
-          Packaging concepts designed around brand identity,
-          audience and visual communication.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Print Design</h3>
-        <p>
-          Editorial, promotional and printed communication
-          materials.
+          Packaging design and print communication with attention
+          to brand identity, audience and production.
         </p>
       </div>
 
@@ -199,7 +362,15 @@
         <h3>Creative Direction</h3>
         <p>
           Developing visual concepts and maintaining consistency
-          across brand touchpoints.
+          across different brand touchpoints.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Print & Editorial</h3>
+        <p>
+          Print materials, editorial design, promotional materials
+          and visual communication.
         </p>
       </div>
 
@@ -208,47 +379,166 @@
   </section>
 
 
-  <section id="branding">
+  <section id="experience">
 
-    <h2>Branding</h2>
+    <div class="section-label">03 — Experience</div>
 
-    <div class="about">
-      <p>
-        My approach to branding combines visual identity,
-        strategic thinking and an understanding of how people
-        perceive and respond to brands.
+    <h2>Professional Experience</h2>
+
+    <div class="experience">
+
+      <p class="experience-title">
+        Selected organizations and professional collaborations
       </p>
+
+      <ul class="experience-list">
+
+        <li>کانون تبلیغاتی هنر و اندیشه</li>
+        <li>انتشارات مهرگان</li>
+        <li>اوژن اندیشان فن آور — Medical & Operating Room Systems</li>
+        <li>پارک علم و فناوری پردیس</li>
+        <li>Alpha Degree Co. — Toronto</li>
+        <li>سامان تهویه ایرانیان</li>
+        <li>داروما پک</li>
+        <li>ایران وب لایف — Design Team Manager</li>
+        <li>خانه گرافیک ایلیای ایرانیان</li>
+        <li>صندوق زیست فناوری</li>
+        <li>آفاق گرافیک</li>
+        <li>رهنوردان هلیای آسمان</li>
+        <li>صدا و سیمای شبکه باران — Set Designer</li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="experience">
+
+      <p class="experience-title">
+        Teaching & Education
+      </p>
+
+      <ul class="experience-list">
+
+        <li>دبیر رشته هنر</li>
+        <li>مجتمع فنی روشنگر</li>
+        <li>مؤسسه چشم‌انداز فردا</li>
+        <li>هنرستان استثنایی باغچه‌بان رشت</li>
+        <li>فنی حرفه‌ای رشت — مدرس و آزمونگر</li>
+        <li>مؤسسه مهر نیکان</li>
+
+      </ul>
+
     </div>
 
   </section>
 
 
-  <section id="psychology">
+  <section id="education">
 
-    <h2>Psychology</h2>
+    <div class="section-label">04 — Education</div>
 
-    <div class="about">
-      <p>
-        Psychology trainee interested in visual perception,
-        human behavior and the relationship between people,
-        images and brands.
-      </p>
+    <h2>Education</h2>
+
+    <div class="education-item">
+
+      <strong>
+        MBA — Strategic Marketing
+      </strong>
+
+      <span class="date">2024 – 2025</span>
+
+    </div>
+
+    <div class="education-item">
+
+      <strong>
+        MA — Psychology
+      </strong>
+
+      <span class="date">2024 – 2026</span>
+
+    </div>
+
+    <div class="education-item">
+
+      <strong>
+        MA — Photography
+      </strong>
+
+      <span class="date">2014 – 2016</span>
+
+      <p>Tehran University of Art</p>
+
+    </div>
+
+    <div class="education-item">
+
+      <strong>
+        BA — Graphic Design
+      </strong>
+
+      <span class="date">2003 – 2007</span>
+
+    </div>
+
+
+    <br><br>
+
+    <h3>Relevant Studies & Training</h3>
+
+    <div class="skills">
+
+      <span class="skill">Schema Therapy</span>
+      <span class="skill">Cognitive Behavioral Therapy (CBT)</span>
+      <span class="skill">QEEG Brain Mapping Workshop (QEEG)</span>
+      <span class="skill">Acceptance and Commitment Therapy (ACT)</span>
+      <span class="skill">Suicide Crisis Management</span>
+
     </div>
 
   </section>
 
 
-  <section id="about">
+  <section id="skills">
 
-    <h2>About</h2>
+    <div class="section-label">05 — Skills</div>
 
-    <div class="about">
-      <p>
-        Graphic designer and brand consultant with an academic
-        background in photography and psychology.
-        My work focuses on visual communication, branding,
-        packaging and the psychological dimensions of design.
-      </p>
+    <h2>Tools & Skills</h2>
+
+    <h3>Design & Creative Tools</h3>
+
+    <br>
+
+    <div class="skills">
+
+      <span class="skill">Adobe Photoshop</span>
+      <span class="skill">Adobe Illustrator</span>
+      <span class="skill">Adobe InDesign</span>
+      <span class="skill">Adobe Lightroom</span>
+      <span class="skill">CorelDRAW</span>
+      <span class="skill">Adobe Premiere</span>
+      <span class="skill">Edius</span>
+      <span class="skill">Figma</span>
+      <span class="skill">AI Tools</span>
+
+    </div>
+
+    <br><br>
+
+    <h3>Productivity & Office Tools</h3>
+
+    <br>
+
+    <div class="skills">
+
+      <span class="skill">Microsoft Word</span>
+      <span class="skill">Microsoft Excel</span>
+      <span class="skill">PowerPoint</span>
+      <span class="skill">Google Forms</span>
+      <span class="skill">Google Docs</span>
+      <span class="skill">Power BI</span>
+
     </div>
 
   </section>
@@ -256,26 +546,47 @@
 
   <section id="contact">
 
-    <h2>Contact</h2>
+    <div class="section-label">06 — Contact</div>
 
-    <div class="about">
-      <p>
-        For collaborations, design projects and professional
-        opportunities, please get in touch.
-      </p>
+    <h2>Let's Connect</h2>
 
-      <br>
+    <div class="contact">
 
       <p>
-        Email: your-email@example.com
+        Email:
+        <a href="mailto:bitanegahdar@gmail.com">
+          bitanegahdar@gmail.com
+        </a>
       </p>
+
+      <p>
+        Mobile:
+        <a href="tel:+989119382619">
+          09119382619
+        </a>
+      </p>
+
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/bita-negahdar/" target="_blank">
+          bita-negahdar
+        </a>
+      </p>
+
+      <p>
+        Instagram:
+        <a href="https://www.instagram.com/bitanegahdar.ir/" target="_blank">
+          @bitanegahdar.ir
+        </a>
+      </p>
+
     </div>
 
   </section>
 
 
   <footer>
-    © 2026 Bita Negahdar
+    © 2026 Bita Negahdar · Graphic Designer · Brand Consultant · Psychology Trainee
   </footer>
 
 </body>
