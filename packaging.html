@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,26 +85,98 @@
       font-size: 15px;
     }
 
-    /* SLIDESHOW PLACEHOLDER */
+    /* SLIDESHOW */
 
     .slideshow {
+      position: relative;
       width: 100%;
-      height: 430px;
-      background: #0b0b0b;
+      height: 520px;
+      overflow: hidden;
+      background: #080808;
       border-bottom: 1px solid #222222;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slide-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 45px;
+      height: 45px;
+      border: 1px solid rgba(255,255,255,0.35);
+      background: rgba(0,0,0,0.35);
+      color: #ffffff;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 5;
+      transition: 0.3s;
+    }
+
+    .slide-button:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .prev {
+      left: 25px;
+    }
+
+    .next {
+      right: 25px;
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #444444;
-      letter-spacing: 3px;
-      font-size: 11px;
-      text-transform: uppercase;
+      gap: 8px;
+      z-index: 5;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .dot.active {
+      background: #ffffff;
     }
 
     /* GALLERY */
 
     .gallery-section {
       padding: 90px 7%;
+    }
+
+    .gallery-title {
+      text-align: center;
+      color: #666666;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 45px;
     }
 
     .gallery {
@@ -118,22 +191,59 @@
       aspect-ratio: 1 / 1;
       background: #0d0d0d;
       border: 1px solid #252525;
-      display: flex;
-      align-items: flex-end;
-      padding: 25px;
+      overflow: hidden;
+      cursor: pointer;
       transition: 0.4s ease;
     }
 
     .project:hover {
-      background: #151515;
       border-color: #666666;
       transform: translateY(-4px);
     }
 
-    .project span {
-      color: #777777;
-      font-size: 12px;
-      letter-spacing: 1px;
+    .project img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .project:hover img {
+      transform: scale(1.04);
+    }
+
+    /* LIGHTBOX */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.94);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 30px;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 92vw;
+      max-height: 88vh;
+      object-fit: contain;
+    }
+
+    .close {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      color: #ffffff;
+      font-size: 35px;
+      cursor: pointer;
+      font-weight: 300;
     }
 
     footer {
@@ -154,7 +264,7 @@
       }
 
       .slideshow {
-        height: 260px;
+        height: 300px;
       }
 
       .gallery {
@@ -165,6 +275,20 @@
       .gallery-section {
         padding: 60px 5%;
       }
+
+      .slide-button {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+      }
+
+      .prev {
+        left: 12px;
+      }
+
+      .next {
+        right: 12px;
+      }
     }
 
     @media (max-width: 500px) {
@@ -172,12 +296,18 @@
       .gallery {
         grid-template-columns: 1fr;
       }
+
+      .slideshow {
+        height: 230px;
+      }
     }
 
   </style>
 </head>
 
 <body>
+
+  <!-- HEADER -->
 
   <header>
 
@@ -206,65 +336,154 @@
   <!-- WIDE SLIDESHOW -->
 
   <div class="slideshow">
-    Packaging Design — Featured Projects
+
+    <div class="slide active">
+      <img src="p%20%2838%29.jpg" alt="Packaging Design Featured Project 38">
+    </div>
+
+    <div class="slide">
+      <img src="p%20%2840%29.jpg" alt="Packaging Design Featured Project 40">
+    </div>
+
+    <button class="slide-button prev" onclick="changeSlide(-1)">‹</button>
+    <button class="slide-button next" onclick="changeSlide(1)">›</button>
+
+    <div class="dots">
+      <div class="dot active" onclick="showSlide(0)"></div>
+      <div class="dot" onclick="showSlide(1)"></div>
+    </div>
+
   </div>
 
 
-  <!-- 40 PROJECTS -->
+  <!-- GALLERY -->
 
   <section class="gallery-section">
 
+    <div class="gallery-title">
+      Selected Packaging Projects
+    </div>
+
     <div class="gallery">
 
-      <div class="project"><span>Project 01</span></div>
-      <div class="project"><span>Project 02</span></div>
-      <div class="project"><span>Project 03</span></div>
-      <div class="project"><span>Project 04</span></div>
-      <div class="project"><span>Project 05</span></div>
-      <div class="project"><span>Project 06</span></div>
-      <div class="project"><span>Project 07</span></div>
-      <div class="project"><span>Project 08</span></div>
-      <div class="project"><span>Project 09</span></div>
-      <div class="project"><span>Project 10</span></div>
-      <div class="project"><span>Project 11</span></div>
-      <div class="project"><span>Project 12</span></div>
-      <div class="project"><span>Project 13</span></div>
-      <div class="project"><span>Project 14</span></div>
-      <div class="project"><span>Project 15</span></div>
-      <div class="project"><span>Project 16</span></div>
-      <div class="project"><span>Project 17</span></div>
-      <div class="project"><span>Project 18</span></div>
-      <div class="project"><span>Project 19</span></div>
-      <div class="project"><span>Project 20</span></div>
-      <div class="project"><span>Project 21</span></div>
-      <div class="project"><span>Project 22</span></div>
-      <div class="project"><span>Project 23</span></div>
-      <div class="project"><span>Project 24</span></div>
-      <div class="project"><span>Project 25</span></div>
-      <div class="project"><span>Project 26</span></div>
-      <div class="project"><span>Project 27</span></div>
-      <div class="project"><span>Project 28</span></div>
-      <div class="project"><span>Project 29</span></div>
-      <div class="project"><span>Project 30</span></div>
-      <div class="project"><span>Project 31</span></div>
-      <div class="project"><span>Project 32</span></div>
-      <div class="project"><span>Project 33</span></div>
-      <div class="project"><span>Project 34</span></div>
-      <div class="project"><span>Project 35</span></div>
-      <div class="project"><span>Project 36</span></div>
-      <div class="project"><span>Project 37</span></div>
-      <div class="project"><span>Project 38</span></div>
-      <div class="project"><span>Project 39</span></div>
-      <div class="project"><span>Project 40</span></div>
+      <div class="project"><img src="p%20%281%29.jpg" alt="Packaging Project 01" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%282%29.jpg" alt="Packaging Project 02" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%283%29.jpg" alt="Packaging Project 03" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%284%29.jpg" alt="Packaging Project 04" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%285%29.jpg" alt="Packaging Project 05" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%286%29.jpg" alt="Packaging Project 06" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%287%29.jpg" alt="Packaging Project 07" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%288%29.jpg" alt="Packaging Project 08" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%289%29.jpg" alt="Packaging Project 09" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2810%29.jpg" alt="Packaging Project 10" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2811%29.jpg" alt="Packaging Project 11" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2812%29.jpg" alt="Packaging Project 12" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2813%29.jpg" alt="Packaging Project 13" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2814%29.jpg" alt="Packaging Project 14" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2815%29.jpg" alt="Packaging Project 15" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2816%29.jpg" alt="Packaging Project 16" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2817%29.jpg" alt="Packaging Project 17" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2818%29.jpg" alt="Packaging Project 18" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2819%29.jpg" alt="Packaging Project 19" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2820%29.jpg" alt="Packaging Project 20" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2821%29.jpg" alt="Packaging Project 21" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2822%29.jpg" alt="Packaging Project 22" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2823%29.jpg" alt="Packaging Project 23" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2824%29.jpg" alt="Packaging Project 24" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2825%29.jpg" alt="Packaging Project 25" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2826%29.jpg" alt="Packaging Project 26" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2827%29.jpg" alt="Packaging Project 27" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2828%29.jpg" alt="Packaging Project 28" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2829%29.jpg" alt="Packaging Project 29" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2830%29.jpg" alt="Packaging Project 30" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2831%29.jpg" alt="Packaging Project 31" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2832%29.jpg" alt="Packaging Project 32" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2833%29.jpg" alt="Packaging Project 33" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2834%29.jpg" alt="Packaging Project 34" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2835%29.jpg" alt="Packaging Project 35" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2836%29.jpg" alt="Packaging Project 36" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2837%29.jpg" alt="Packaging Project 37" onclick="openLightbox(this.src)"></div>
+      <div class="project"><img src="p%20%2839%29.jpg" alt="Packaging Project 39" onclick="openLightbox(this.src)"></div>
 
     </div>
 
   </section>
 
 
+  <!-- LIGHTBOX -->
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+
+    <span class="close">×</span>
+
+    <img id="lightbox-image" src="" alt="Packaging Project">
+
+  </div>
+
+
   <footer>
     © 2026 BITA NEGAHDAR
   </footer>
 
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    let currentSlide = 0;
+
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+
+    function showSlide(index) {
+
+      currentSlide = index;
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === currentSlide);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentSlide);
+      });
+    }
+
+    function changeSlide(direction) {
+
+      currentSlide += direction;
+
+      if (currentSlide >= slides.length) {
+        currentSlide = 0;
+      }
+
+      if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+      }
+
+      showSlide(currentSlide);
+    }
+
+    setInterval(() => {
+      changeSlide(1);
+    }, 5000);
+
+
+    function openLightbox(src) {
+
+      document.getElementById("lightbox-image").src = src;
+
+      document.getElementById("lightbox").classList.add("active");
+
+    }
+
+    function closeLightbox() {
+
+      document.getElementById("lightbox").classList.remove("active");
+
+    }
+
+  </script>
+
 </body>
 </html>
+```
