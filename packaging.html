@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Packaging Design | BITA NEGAHDAR</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #000000;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 7% 70px;
+      border-bottom: 1px solid #1c1c1c;
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 1500px;
+    }
+
+    .back {
+      display: inline-block;
+      color: #777777;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 45px;
+      transition: 0.3s;
+    }
+
+    .back:hover {
+      color: #ffffff;
+    }
+
+    .category-label {
+      color: #666666;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: clamp(48px, 8vw, 110px);
+      font-weight: 700;
+      letter-spacing: 4px;
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #888888;
+      font-size: 15px;
+    }
+
+    /* SLIDESHOW PLACEHOLDER */
+
+    .slideshow {
+      width: 100%;
+      height: 430px;
+      background: #0b0b0b;
+      border-bottom: 1px solid #222222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #444444;
+      letter-spacing: 3px;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    /* GALLERY */
+
+    .gallery-section {
+      padding: 90px 7%;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .project {
+      aspect-ratio: 1 / 1;
+      background: #0d0d0d;
+      border: 1px solid #252525;
+      display: flex;
+      align-items: flex-end;
+      padding: 25px;
+      transition: 0.4s ease;
+    }
+
+    .project:hover {
+      background: #151515;
+      border-color: #666666;
+      transform: translateY(-4px);
+    }
+
+    .project span {
+      color: #777777;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      border-top: 1px solid #1c1c1c;
+      color: #555555;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      header {
+        min-height: 60vh;
+      }
+
+      .slideshow {
+        height: 260px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .gallery-section {
+        padding: 60px 5%;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="hero-content">
+
+      <a href="index.html" class="back">
+        ← Back to Portfolio
+      </a>
+
+      <div class="category-label">
+        Selected Work
+      </div>
+
+      <h1>Packaging Design</h1>
+
+      <p class="intro">
+        A selection of packaging design projects developed across different brands,
+        products, and visual communication needs.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <!-- WIDE SLIDESHOW -->
+
+  <div class="slideshow">
+    Packaging Design — Featured Projects
+  </div>
+
+
+  <!-- 40 PROJECTS -->
+
+  <section class="gallery-section">
+
+    <div class="gallery">
+
+      <div class="project"><span>Project 01</span></div>
+      <div class="project"><span>Project 02</span></div>
+      <div class="project"><span>Project 03</span></div>
+      <div class="project"><span>Project 04</span></div>
+      <div class="project"><span>Project 05</span></div>
+      <div class="project"><span>Project 06</span></div>
+      <div class="project"><span>Project 07</span></div>
+      <div class="project"><span>Project 08</span></div>
+      <div class="project"><span>Project 09</span></div>
+      <div class="project"><span>Project 10</span></div>
+      <div class="project"><span>Project 11</span></div>
+      <div class="project"><span>Project 12</span></div>
+      <div class="project"><span>Project 13</span></div>
+      <div class="project"><span>Project 14</span></div>
+      <div class="project"><span>Project 15</span></div>
+      <div class="project"><span>Project 16</span></div>
+      <div class="project"><span>Project 17</span></div>
+      <div class="project"><span>Project 18</span></div>
+      <div class="project"><span>Project 19</span></div>
+      <div class="project"><span>Project 20</span></div>
+      <div class="project"><span>Project 21</span></div>
+      <div class="project"><span>Project 22</span></div>
+      <div class="project"><span>Project 23</span></div>
+      <div class="project"><span>Project 24</span></div>
+      <div class="project"><span>Project 25</span></div>
+      <div class="project"><span>Project 26</span></div>
+      <div class="project"><span>Project 27</span></div>
+      <div class="project"><span>Project 28</span></div>
+      <div class="project"><span>Project 29</span></div>
+      <div class="project"><span>Project 30</span></div>
+      <div class="project"><span>Project 31</span></div>
+      <div class="project"><span>Project 32</span></div>
+      <div class="project"><span>Project 33</span></div>
+      <div class="project"><span>Project 34</span></div>
+      <div class="project"><span>Project 35</span></div>
+      <div class="project"><span>Project 36</span></div>
+      <div class="project"><span>Project 37</span></div>
+      <div class="project"><span>Project 38</span></div>
+      <div class="project"><span>Project 39</span></div>
+      <div class="project"><span>Project 40</span></div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    © 2026 BITA NEGAHDAR
+  </footer>
+
+</body>
+</html>
