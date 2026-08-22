@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -50,26 +52,17 @@ max-width:1500px;
 }
 
 
-/* BACK ICON */
-
 .back{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-width:42px;
-height:42px;
-border:1px solid #333;
-border-radius:50%;
-color:#aaa;
-font-size:24px;
+display:inline-block;
+color:#777;
+font-size:28px;
+letter-spacing:2px;
 margin-bottom:45px;
 transition:.3s;
 }
 
-
 .back:hover{
 color:#fff;
-border-color:#fff;
 }
 
 
@@ -149,8 +142,8 @@ transform:scale(1.03);
 
 .project-title{
 position:absolute;
-left:0;
 bottom:0;
+left:0;
 width:100%;
 padding:35px 20px 18px;
 background:linear-gradient(
@@ -158,6 +151,16 @@ transparent,
 rgba(0,0,0,.85)
 );
 font-size:12px;
+letter-spacing:1px;
+}
+
+
+  footer{
+padding:40px;
+text-align:center;
+border-top:1px solid #1c1c1c;
+color:#555;
+font-size:11px;
 letter-spacing:1px;
 }
 
@@ -192,32 +195,17 @@ object-fit:contain;
 position:absolute;
 top:25px;
 right:35px;
-font-size:38px;
-font-weight:300;
+font-size:35px;
 color:#fff;
 cursor:pointer;
+font-weight:300;
 }
 
-
-/* FOOTER */
-
-footer{
-padding:40px;
-text-align:center;
-border-top:1px solid #1c1c1c;
-color:#555;
-font-size:11px;
-letter-spacing:1px;
-}
 
 
 /* MOBILE */
 
 @media(max-width:800px){
-
-header{
-min-height:60vh;
-}
 
 .gallery{
 grid-template-columns:repeat(2,1fr);
@@ -242,13 +230,14 @@ grid-template-columns:1fr;
 </style>
 
 </head>
+
+
 <body>
 
 
 <header>
 
 <div class="hero-content">
-
 
 <a href="index.html" class="back" aria-label="Back to Portfolio">
 ←
@@ -286,78 +275,65 @@ materials, formats, and visual communication needs.
 <div class="project-title">Project 01</div>
 </div>
 
-
 <div class="project">
 <img src="printing (2).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 02</div>
 </div>
-
 
 <div class="project">
 <img src="printing (3).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 03</div>
 </div>
 
-
 <div class="project">
 <img src="printing (4).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 04</div>
 </div>
-
 
 <div class="project">
 <img src="printing (5).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 05</div>
 </div>
 
-
 <div class="project">
 <img src="printing (6).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 06</div>
 </div>
-
 
 <div class="project">
 <img src="printing (7).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 07</div>
 </div>
 
-
 <div class="project">
 <img src="printing (8).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 08</div>
 </div>
-
 
 <div class="project">
 <img src="printing (9).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 09</div>
 </div>
 
-
 <div class="project">
 <img src="printing (10).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 10</div>
 </div>
-
 
 <div class="project">
 <img src="printing (11).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 11</div>
 </div>
 
-
 <div class="project">
 <img src="printing (12).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 12</div>
 </div>
 
-
 <div class="project">
 <img src="printing (13).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 13</div>
 </div>
-
 
 <div class="project">
 <img src="printing (14).jpg" onclick="openLightbox(this.src)">
@@ -368,10 +344,6 @@ materials, formats, and visual communication needs.
 </div>
 
 </section>
-
-
-
-
 <!-- LIGHTBOX -->
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
@@ -384,16 +356,13 @@ materials, formats, and visual communication needs.
 
 
 
-
 <footer>
 © 2026 BITA NEGAHDAR
 </footer>
 
 
 
-
 <script>
-
 
 function openLightbox(src){
 
@@ -411,10 +380,10 @@ document.getElementById("lightbox").classList.remove("active");
 
 }
 
-
 </script>
 
 
 
 </body>
+
 </html>
