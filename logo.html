@@ -53,7 +53,9 @@ max-width:1500px;
 }
 
 
-/* BACK BUTTON */
+/* =========================
+   BACK BUTTON
+========================= */
 
 .back{
 display:inline-flex;
@@ -83,7 +85,9 @@ transform:translateX(-4px);
 }
 
 
-/* CATEGORY */
+/* =========================
+   CATEGORY
+========================= */
 
 .category-label{
 color:#666;
@@ -94,24 +98,36 @@ margin-bottom:18px;
 }
 
 
-/* TITLE */
+/* =========================
+   MAIN TITLE
+========================= */
 
 h1{
 font-family:Helvetica,Arial,sans-serif;
+
 font-size:clamp(48px,8vw,110px);
+
 font-weight:700;
+
 letter-spacing:4px;
+
 line-height:1;
+
 margin-bottom:25px;
 }
 
 
-/* INTRO */
+/* =========================
+   INTRO
+========================= */
 
 .intro{
 max-width:650px;
+
 margin:auto;
+
 color:#888;
+
 font-size:15px;
 }
 
@@ -124,22 +140,29 @@ font-size:15px;
 padding:90px 7%;
 }
 
+
 .gallery{
 display:grid;
+
 grid-template-columns:repeat(3,1fr);
+
 gap:18px;
+
 max-width:1500px;
+
 margin:auto;
 }
 
 
-/*
-   IMPORTANT:
-   No fixed aspect ratio.
-   Each image keeps its original proportions.
-*/
+/* =========================
+   PROJECT FRAME
+   IMAGE RATIO: 25 / 16.74
+========================= */
 
 .project{
+
+aspect-ratio:25 / 16.74;
+
 background:#0d0d0d;
 
 border:1px solid #252525;
@@ -153,38 +176,54 @@ cursor:pointer;
 transition:0.4s ease;
 }
 
+
 .project:hover{
+
 border-color:#666;
 
 transform:translateY(-4px);
+
 }
 
 
-/* IMAGE */
+/* =========================
+   PROJECT IMAGE
+========================= */
 
 .project img{
+
 width:100%;
 
-height:auto;
+height:100%;
 
 display:block;
 
-object-fit:contain;
+object-fit:cover;
+
+object-position:center;
 
 transition:0.4s ease;
+
 }
+
 
 .project:hover img{
+
 transform:scale(1.03);
+
 }
 
 
-/* PROJECT TITLE */
+/* =========================
+   PROJECT TITLE
+========================= */
 
 .project-title{
+
 position:absolute;
 
 bottom:0;
+
 left:0;
 
 width:100%;
@@ -199,6 +238,7 @@ rgba(0,0,0,.85)
 font-size:12px;
 
 letter-spacing:1px;
+
 }
 
 
@@ -207,6 +247,7 @@ letter-spacing:1px;
 ========================= */
 
 .lightbox{
+
 position:fixed;
 
 inset:0;
@@ -222,13 +263,19 @@ justify-content:center;
 z-index:100;
 
 padding:30px;
+
 }
+
 
 .lightbox.active{
+
 display:flex;
+
 }
 
+
 .lightbox img{
+
 max-width:92vw;
 
 max-height:88vh;
@@ -238,12 +285,16 @@ width:auto;
 height:auto;
 
 object-fit:contain;
+
 }
 
 
-/* CLOSE BUTTON */
+/* =========================
+   CLOSE BUTTON
+========================= */
 
 .close{
+
 position:absolute;
 
 top:25px;
@@ -257,6 +308,7 @@ color:#fff;
 cursor:pointer;
 
 font-weight:300;
+
 }
 
 
@@ -265,6 +317,7 @@ font-weight:300;
 ========================= */
 
 footer{
+
 padding:40px;
 
 text-align:center;
@@ -276,6 +329,7 @@ color:#555;
 font-size:11px;
 
 letter-spacing:1px;
+
 }
 
 
@@ -286,13 +340,17 @@ letter-spacing:1px;
 @media(max-width:800px){
 
 .gallery{
+
 grid-template-columns:repeat(2,1fr);
 
 gap:10px;
+
 }
 
 .gallery-section{
+
 padding:60px 5%;
+
 }
 
 }
@@ -305,7 +363,9 @@ padding:60px 5%;
 @media(max-width:500px){
 
 .gallery{
+
 grid-template-columns:1fr;
+
 }
 
 }
@@ -327,9 +387,11 @@ grid-template-columns:1fr;
 <div class="hero-content">
 
 
-<a href="index.html"
-   class="back"
-   aria-label="Back to Portfolio">
+<a
+href="index.html"
+class="back"
+aria-label="Back to Portfolio"
+>
 
 ←
 
@@ -374,8 +436,6 @@ for different brands, organizations, and communication purposes.
 <div class="gallery">
 
 
-<!-- LOGO 01 -->
-
 <div class="project">
 
 <img
@@ -393,7 +453,6 @@ Project 01
 </div>
 
 
-<!-- LOGO 02 -->
 
 <div class="project">
 
@@ -412,7 +471,6 @@ Project 02
 </div>
 
 
-<!-- LOGO 03 -->
 
 <div class="project">
 
@@ -431,7 +489,6 @@ Project 03
 </div>
 
 
-<!-- LOGO 04 -->
 
 <div class="project">
 
@@ -450,7 +507,6 @@ Project 04
 </div>
 
 
-<!-- LOGO 05 -->
 
 <div class="project">
 
@@ -469,7 +525,6 @@ Project 05
 </div>
 
 
-<!-- LOGO 06 -->
 
 <div class="project">
 
@@ -488,7 +543,6 @@ Project 06
 </div>
 
 
-<!-- LOGO 07 -->
 
 <div class="project">
 
@@ -507,7 +561,6 @@ Project 07
 </div>
 
 
-<!-- LOGO 08 -->
 
 <div class="project">
 
@@ -526,7 +579,6 @@ Project 08
 </div>
 
 
-<!-- LOGO 09 -->
 
 <div class="project">
 
@@ -545,7 +597,6 @@ Project 09
 </div>
 
 
-<!-- LOGO 10 -->
 
 <div class="project">
 
@@ -564,7 +615,6 @@ Project 10
 </div>
 
 
-<!-- LOGO 11 -->
 
 <div class="project">
 
@@ -583,7 +633,6 @@ Project 11
 </div>
 
 
-<!-- LOGO 12 -->
 
 <div class="project">
 
@@ -602,7 +651,6 @@ Project 12
 </div>
 
 
-<!-- LOGO 13 -->
 
 <div class="project">
 
@@ -621,7 +669,6 @@ Project 13
 </div>
 
 
-<!-- LOGO 14 -->
 
 <div class="project">
 
@@ -640,7 +687,6 @@ Project 14
 </div>
 
 
-<!-- LOGO 15 -->
 
 <div class="project">
 
@@ -659,7 +705,6 @@ Project 15
 </div>
 
 
-<!-- LOGO 16 -->
 
 <div class="project">
 
@@ -678,7 +723,6 @@ Project 16
 </div>
 
 
-<!-- LOGO 17 -->
 
 <div class="project">
 
@@ -697,7 +741,6 @@ Project 17
 </div>
 
 
-<!-- LOGO 18 -->
 
 <div class="project">
 
@@ -716,7 +759,6 @@ Project 18
 </div>
 
 
-<!-- LOGO 19 -->
 
 <div class="project">
 
@@ -735,7 +777,6 @@ Project 19
 </div>
 
 
-<!-- LOGO 20 -->
 
 <div class="project">
 
@@ -770,6 +811,7 @@ id="lightbox"
 onclick="closeLightbox()"
 >
 
+
 <span class="close">
 
 ×
@@ -782,6 +824,7 @@ id="lightbox-image"
 src=""
 alt="Logo Project"
 >
+
 
 </div>
 
@@ -805,6 +848,7 @@ alt="Logo Project"
 
 <script>
 
+
 function openLightbox(src){
 
 document
@@ -825,6 +869,7 @@ document
 .classList.remove("active");
 
 }
+
 
 </script>
 
