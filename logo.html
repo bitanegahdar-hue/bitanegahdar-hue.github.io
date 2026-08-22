@@ -33,7 +33,9 @@ text-decoration:none;
 }
 
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
 min-height:70vh;
@@ -45,40 +47,43 @@ padding:100px 7% 70px;
 border-bottom:1px solid #1c1c1c;
 }
 
-
 .hero-content{
 width:100%;
 max-width:1500px;
 }
 
 
-.back {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+/* BACK BUTTON */
 
-  width: 42px;
-  height: 42px;
+.back{
+display:inline-flex;
+align-items:center;
+justify-content:center;
 
-  color: #777777;
+width:42px;
+height:42px;
 
-  font-size: 28px;
-  font-weight: 300;
+color:#777777;
 
-  border: 1px solid #333333;
-  border-radius: 50%;
+font-size:28px;
+font-weight:300;
 
-  margin-bottom: 45px;
+border:1px solid #333333;
+border-radius:50%;
 
-  transition: 0.3s ease;
+margin-bottom:45px;
+
+transition:0.3s ease;
 }
 
-.back:hover {
-  color: #ffffff;
-  border-color: #ffffff;
-  transform: translateX(-4px);
+.back:hover{
+color:#ffffff;
+border-color:#ffffff;
+transform:translateX(-4px);
 }
 
+
+/* CATEGORY */
 
 .category-label{
 color:#666;
@@ -88,6 +93,8 @@ text-transform:uppercase;
 margin-bottom:18px;
 }
 
+
+/* TITLE */
 
 h1{
 font-family:Helvetica,Arial,sans-serif;
@@ -99,6 +106,8 @@ margin-bottom:25px;
 }
 
 
+/* INTRO */
+
 .intro{
 max-width:650px;
 margin:auto;
@@ -107,12 +116,13 @@ font-size:15px;
 }
 
 
-/* GALLERY */
+/* =========================
+   GALLERY
+========================= */
 
 .gallery-section{
 padding:90px 7%;
 }
-
 
 .gallery{
 display:grid;
@@ -123,105 +133,161 @@ margin:auto;
 }
 
 
-.project{
-aspect-ratio:1/1;
-background:#0d0d0d;
-border:1px solid #252525;
-position:relative;
-overflow:hidden;
-cursor:pointer;
-transition:.4s ease;
-}
+/*
+   IMPORTANT:
+   No fixed aspect ratio.
+   Each image keeps its original proportions.
+*/
 
+.project{
+background:#0d0d0d;
+
+border:1px solid #252525;
+
+position:relative;
+
+overflow:hidden;
+
+cursor:pointer;
+
+transition:0.4s ease;
+}
 
 .project:hover{
 border-color:#666;
+
 transform:translateY(-4px);
 }
 
 
+/* IMAGE */
+
 .project img{
 width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-transition:.4s ease;
-}
 
+height:auto;
+
+display:block;
+
+object-fit:contain;
+
+transition:0.4s ease;
+}
 
 .project:hover img{
 transform:scale(1.03);
 }
-  .project-title{
+
+
+/* PROJECT TITLE */
+
+.project-title{
 position:absolute;
+
 bottom:0;
 left:0;
+
 width:100%;
+
 padding:35px 20px 18px;
+
 background:linear-gradient(
 transparent,
 rgba(0,0,0,.85)
 );
+
 font-size:12px;
+
 letter-spacing:1px;
 }
 
 
-/* LIGHTBOX */
+/* =========================
+   LIGHTBOX
+========================= */
 
 .lightbox{
 position:fixed;
+
 inset:0;
+
 background:rgba(0,0,0,.94);
+
 display:none;
+
 align-items:center;
+
 justify-content:center;
+
 z-index:100;
+
 padding:30px;
 }
-
 
 .lightbox.active{
 display:flex;
 }
 
-
 .lightbox img{
 max-width:92vw;
+
 max-height:88vh;
+
+width:auto;
+
+height:auto;
+
 object-fit:contain;
 }
 
 
+/* CLOSE BUTTON */
+
 .close{
 position:absolute;
+
 top:25px;
+
 right:35px;
+
 font-size:35px;
+
 color:#fff;
+
 cursor:pointer;
+
 font-weight:300;
 }
 
 
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 padding:40px;
+
 text-align:center;
+
 border-top:1px solid #1c1c1c;
+
 color:#555;
+
 font-size:11px;
+
 letter-spacing:1px;
 }
 
 
-
-/* MOBILE */
+/* =========================
+   TABLET
+========================= */
 
 @media(max-width:800px){
 
 .gallery{
 grid-template-columns:repeat(2,1fr);
+
 gap:10px;
 }
 
@@ -231,6 +297,10 @@ padding:60px 5%;
 
 }
 
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:500px){
 
@@ -248,27 +318,43 @@ grid-template-columns:1fr;
 <body>
 
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
 <div class="hero-content">
 
 
-<a href="index.html" class="back" aria-label="Back to Portfolio">
+<a href="index.html"
+   class="back"
+   aria-label="Back to Portfolio">
+
 ←
+
 </a>
 
 
 <div class="category-label">
+
 Selected Work
+
 </div>
 
 
-<h1>Logo & Visual Identity</h1>
+<h1>
+
+Logo & Visual Identity
+
+</h1>
 
 
 <p class="intro">
+
 A selection of logo design and visual identity projects developed
 for different brands, organizations, and communication purposes.
+
 </p>
 
 
@@ -278,127 +364,393 @@ for different brands, organizations, and communication purposes.
 
 
 
+<!-- =========================
+     GALLERY
+========================= -->
+
 <section class="gallery-section">
 
 
 <div class="gallery">
 
 
+<!-- LOGO 01 -->
+
 <div class="project">
-<img src="logo (1).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 01</div>
+
+<img
+src="logo (1).jpg"
+alt="Logo Project 01"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 01
+
+</div>
+
 </div>
 
 
+<!-- LOGO 02 -->
+
 <div class="project">
-<img src="logo (2).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 02</div>
+
+<img
+src="logo (2).jpg"
+alt="Logo Project 02"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 02
+
+</div>
+
 </div>
 
 
+<!-- LOGO 03 -->
+
 <div class="project">
-<img src="logo (3).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 03</div>
+
+<img
+src="logo (3).jpg"
+alt="Logo Project 03"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 03
+
+</div>
+
 </div>
 
 
+<!-- LOGO 04 -->
+
 <div class="project">
-<img src="logo (4).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 04</div>
+
+<img
+src="logo (4).jpg"
+alt="Logo Project 04"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 04
+
+</div>
+
 </div>
 
 
+<!-- LOGO 05 -->
+
 <div class="project">
-<img src="logo (5).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 05</div>
+
+<img
+src="logo (5).jpg"
+alt="Logo Project 05"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 05
+
+</div>
+
 </div>
 
 
+<!-- LOGO 06 -->
+
 <div class="project">
-<img src="logo (6).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 06</div>
+
+<img
+src="logo (6).jpg"
+alt="Logo Project 06"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 06
+
+</div>
+
 </div>
 
 
+<!-- LOGO 07 -->
+
 <div class="project">
-<img src="logo (7).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 07</div>
+
+<img
+src="logo (7).jpg"
+alt="Logo Project 07"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 07
+
+</div>
+
 </div>
 
 
+<!-- LOGO 08 -->
+
 <div class="project">
-<img src="logo (8).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 08</div>
+
+<img
+src="logo (8).jpg"
+alt="Logo Project 08"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 08
+
+</div>
+
 </div>
 
 
+<!-- LOGO 09 -->
+
 <div class="project">
-<img src="logo (9).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 09</div>
+
+<img
+src="logo (9).jpg"
+alt="Logo Project 09"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 09
+
+</div>
+
 </div>
 
 
+<!-- LOGO 10 -->
+
 <div class="project">
-<img src="logo (10).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 10</div>
+
+<img
+src="logo (10).jpg"
+alt="Logo Project 10"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 10
+
 </div>
-<div class="project">
-<img src="logo (11).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 11</div>
-</div>
 
-
-<div class="project">
-<img src="logo (12).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 12</div>
-</div>
-
-
-<div class="project">
-<img src="logo (13).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 13</div>
 </div>
 
 
+<!-- LOGO 11 -->
+
 <div class="project">
-<img src="logo (14).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 14</div>
+
+<img
+src="logo (11).jpg"
+alt="Logo Project 11"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 11
+
+</div>
+
 </div>
 
 
+<!-- LOGO 12 -->
+
 <div class="project">
-<img src="logo (15).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 15</div>
+
+<img
+src="logo (12).jpg"
+alt="Logo Project 12"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 12
+
+</div>
+
 </div>
 
 
+<!-- LOGO 13 -->
+
 <div class="project">
-<img src="logo (16).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 16</div>
+
+<img
+src="logo (13).jpg"
+alt="Logo Project 13"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 13
+
+</div>
+
 </div>
 
 
+<!-- LOGO 14 -->
+
 <div class="project">
-<img src="logo (17).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 17</div>
+
+<img
+src="logo (14).jpg"
+alt="Logo Project 14"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 14
+
+</div>
+
 </div>
 
 
+<!-- LOGO 15 -->
+
 <div class="project">
-<img src="logo (18).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 18</div>
+
+<img
+src="logo (15).jpg"
+alt="Logo Project 15"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 15
+
+</div>
+
 </div>
 
 
+<!-- LOGO 16 -->
+
 <div class="project">
-<img src="logo (19).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 19</div>
+
+<img
+src="logo (16).jpg"
+alt="Logo Project 16"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 16
+
+</div>
+
 </div>
 
 
+<!-- LOGO 17 -->
+
 <div class="project">
-<img src="logo (20).jpg" onclick="openLightbox(this.src)">
-<div class="project-title">Project 20</div>
+
+<img
+src="logo (17).jpg"
+alt="Logo Project 17"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 17
+
+</div>
+
+</div>
+
+
+<!-- LOGO 18 -->
+
+<div class="project">
+
+<img
+src="logo (18).jpg"
+alt="Logo Project 18"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 18
+
+</div>
+
+</div>
+
+
+<!-- LOGO 19 -->
+
+<div class="project">
+
+<img
+src="logo (19).jpg"
+alt="Logo Project 19"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 19
+
+</div>
+
+</div>
+
+
+<!-- LOGO 20 -->
+
+<div class="project">
+
+<img
+src="logo (20).jpg"
+alt="Logo Project 20"
+onclick="openLightbox(this.src)"
+>
+
+<div class="project-title">
+
+Project 20
+
+</div>
+
 </div>
 
 
@@ -408,44 +760,73 @@ for different brands, organizations, and communication purposes.
 
 
 
-<!-- LIGHTBOX -->
+<!-- =========================
+     LIGHTBOX
+========================= -->
 
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<div
+class="lightbox"
+id="lightbox"
+onclick="closeLightbox()"
+>
 
-<span class="close">×</span>
+<span class="close">
 
-<img id="lightbox-image" src="" alt="Logo Project">
+×
+
+</span>
+
+
+<img
+id="lightbox-image"
+src=""
+alt="Logo Project"
+>
 
 </div>
 
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
 © 2026 BITA NEGAHDAR
+
 </footer>
 
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
 function openLightbox(src){
 
-document.getElementById("lightbox-image").src = src;
+document
+.getElementById("lightbox-image")
+.src = src;
 
-document.getElementById("lightbox").classList.add("active");
+document
+.getElementById("lightbox")
+.classList.add("active");
 
 }
-
 
 
 function closeLightbox(){
 
-document.getElementById("lightbox").classList.remove("active");
+document
+.getElementById("lightbox")
+.classList.remove("active");
 
 }
 
 </script>
-
 
 
 </body>
