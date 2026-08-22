@@ -8,7 +8,6 @@
 
 <title>Creative Design | BITA NEGAHDAR</title>
 
-
 <style>
 
 *{
@@ -17,11 +16,9 @@ padding:0;
 box-sizing:border-box;
 }
 
-
 html{
 scroll-behavior:smooth;
 }
-
 
 body{
 background:#000;
@@ -30,18 +27,15 @@ font-family:Arial, Helvetica, sans-serif;
 line-height:1.7;
 }
 
-
 a{
 color:inherit;
 text-decoration:none;
 }
 
 
-
 /* HEADER */
 
 header{
-
 min-height:70vh;
 display:flex;
 align-items:center;
@@ -49,109 +43,74 @@ justify-content:center;
 text-align:center;
 padding:100px 7% 70px;
 border-bottom:1px solid #1c1c1c;
-
 }
 
 
 .hero-content{
-
 width:100%;
 max-width:1500px;
-
 }
 
 
-
-/* BACK ICON */
-
 .back{
-
-display:inline-flex;
-align-items:center;
-justify-content:center;
-width:42px;
-height:42px;
-border:1px solid #333;
-border-radius:50%;
-color:#aaa;
-font-size:24px;
+display:inline-block;
+color:#777;
+font-size:28px;
+letter-spacing:2px;
 margin-bottom:45px;
 transition:.3s;
-
 }
 
 
 .back:hover{
-
 color:#fff;
-border-color:#fff;
-
 }
 
 
-
 .category-label{
-
 color:#666;
 font-size:11px;
 letter-spacing:4px;
 text-transform:uppercase;
 margin-bottom:18px;
-
 }
 
 
-
 h1{
-
 font-family:Helvetica,Arial,sans-serif;
 font-size:clamp(48px,8vw,110px);
 font-weight:700;
 letter-spacing:4px;
 line-height:1;
 margin-bottom:25px;
-
 }
 
 
-
 .intro{
-
 max-width:650px;
 margin:auto;
 color:#888;
 font-size:15px;
-
 }
-
-
 
 
 /* GALLERY */
 
-
 .gallery-section{
-
 padding:90px 7%;
-
 }
 
 
-
 .gallery{
-
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:18px;
 max-width:1500px;
 margin:auto;
-
 }
 
 
-
 .project{
-
 aspect-ratio:1/1;
 background:#0d0d0d;
 border:1px solid #252525;
@@ -159,60 +118,45 @@ position:relative;
 overflow:hidden;
 cursor:pointer;
 transition:.4s ease;
-
 }
-
 
 
 .project:hover{
-
 border-color:#666;
 transform:translateY(-4px);
-
 }
 
 
-
 .project img{
-
 width:100%;
 height:100%;
 object-fit:cover;
 display:block;
 transition:.4s ease;
-
 }
-
 
 
 .project:hover img{
-
 transform:scale(1.03);
-
 }
-
-
-
-.project-title{
-
+  .project-title{
 position:absolute;
 bottom:0;
 left:0;
 width:100%;
 padding:35px 20px 18px;
-background:linear-gradient(transparent,rgba(0,0,0,.85));
+background:linear-gradient(
+transparent,
+rgba(0,0,0,.85)
+);
 font-size:12px;
 letter-spacing:1px;
-
 }
-
 
 
 /* LIGHTBOX */
 
-
 .lightbox{
-
 position:fixed;
 inset:0;
 background:rgba(0,0,0,.94);
@@ -221,111 +165,73 @@ align-items:center;
 justify-content:center;
 z-index:100;
 padding:30px;
-
 }
-
 
 
 .lightbox.active{
-
 display:flex;
-
 }
-
 
 
 .lightbox img{
-
 max-width:92vw;
 max-height:88vh;
 object-fit:contain;
-
 }
-
 
 
 .close{
-
 position:absolute;
 top:25px;
 right:35px;
-font-size:38px;
-font-weight:300;
+font-size:35px;
 color:#fff;
 cursor:pointer;
-
+font-weight:300;
 }
 
 
 
-
-/* FOOTER */
-
-
 footer{
-
 padding:40px;
 text-align:center;
 border-top:1px solid #1c1c1c;
 color:#555;
 font-size:11px;
 letter-spacing:1px;
-
 }
-
 
 
 
 /* MOBILE */
 
-
 @media(max-width:800px){
 
-
-header{
-
-min-height:60vh;
-
-}
-
-
 .gallery{
-
 grid-template-columns:repeat(2,1fr);
 gap:10px;
-
 }
-
 
 .gallery-section{
-
 padding:60px 5%;
-
 }
 
 }
-
-
 
 
 @media(max-width:500px){
 
-
 .gallery{
-
 grid-template-columns:1fr;
-
 }
 
-
 }
-
-
 
 </style>
 
-
 </head>
+
+
 <body>
 
 
@@ -359,12 +265,10 @@ visual concepts, and artistic exploration.
 
 
 
-
 <section class="gallery-section">
 
 
 <div class="gallery">
-
 
 
 <div class="project">
@@ -419,8 +323,6 @@ visual concepts, and artistic exploration.
 <img src="creativity (9).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 09</div>
 </div>
-
-
 <div class="project">
 <img src="creativity (10).jpg" onclick="openLightbox(this.src)">
 <div class="project-title">Project 10</div>
@@ -475,47 +377,31 @@ visual concepts, and artistic exploration.
 </div>
 
 
-
 </div>
 
 </section>
 
 
 
-
-
 <!-- LIGHTBOX -->
-
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
 
-
-<span class="close">
-×
-</span>
-
+<span class="close">×</span>
 
 <img id="lightbox-image" src="" alt="Creative Project">
-
 
 </div>
 
 
 
-
-
 <footer>
-
 © 2026 BITA NEGAHDAR
-
 </footer>
 
 
 
-
-
 <script>
-
 
 function openLightbox(src){
 
@@ -532,7 +418,6 @@ function closeLightbox(){
 document.getElementById("lightbox").classList.remove("active");
 
 }
-
 
 </script>
 
