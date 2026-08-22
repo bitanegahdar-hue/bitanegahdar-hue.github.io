@@ -1,319 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Creative Design | BITA NEGAHDAR</title>
+<title>Creative Design | BITA NEGAHDAR</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    body {
-      background: #000000;
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-    }
+html{
+scroll-behavior:smooth;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+body{
+background:#000;
+color:#fff;
+font-family:Arial, Helvetica, sans-serif;
+line-height:1.7;
+}
 
-    /* HEADER */
+a{
+color:inherit;
+text-decoration:none;
+}
 
-    header {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 100px 7% 70px;
-      border-bottom: 1px solid #1c1c1c;
-    }
 
-    .hero-content {
-      width: 100%;
-      max-width: 1500px;
-    }
+/* HEADER */
 
-    .back {
-      display: inline-block;
-      color: #777777;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 45px;
-      transition: 0.3s;
-    }
+header{
+min-height:70vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:100px 7% 70px;
+border-bottom:1px solid #1c1c1c;
+}
 
-    .back:hover {
-      color: #ffffff;
-    }
 
-    .category-label {
-      color: #666666;
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
+.hero-content{
+width:100%;
+max-width:1500px;
+}
 
-    h1 {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: clamp(48px, 8vw, 110px);
-      font-weight: 700;
-      letter-spacing: 4px;
-      line-height: 1;
-      margin-bottom: 25px;
-    }
 
-    .intro {
-      max-width: 650px;
-      margin: 0 auto;
-      color: #888888;
-      font-size: 15px;
-    }
+.back{
+display:inline-block;
+color:#777;
+font-size:11px;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:45px;
+}
 
-    /* GALLERY */
 
-    .gallery-section {
-      padding: 90px 7%;
-    }
+.back:hover{
+color:#fff;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      max-width: 1500px;
-      margin: 0 auto;
-    }
 
-    .project {
-      aspect-ratio: 1 / 1;
-      background: #0d0d0d;
-      border: 1px solid #252525;
-      position: relative;
-      overflow: hidden;
-      transition: 0.4s ease;
-    }
+.category-label{
+color:#666;
+font-size:11px;
+letter-spacing:4px;
+text-transform:uppercase;
+margin-bottom:18px;
+}
 
-    .project:hover {
-      border-color: #666666;
-      transform: translateY(-4px);
-    }
 
-    .project img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: 0.4s ease;
-    }
+h1{
+font-family:Helvetica,Arial,sans-serif;
+font-size:clamp(48px,8vw,110px);
+font-weight:700;
+letter-spacing:4px;
+line-height:1;
+margin-bottom:25px;
+}
 
-    .project:hover img {
-      transform: scale(1.03);
-    }
 
-    .project-title {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      padding: 35px 20px 18px;
-      background: linear-gradient(
-        transparent,
-        rgba(0,0,0,0.85)
-      );
-      color: #ffffff;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
+.intro{
+max-width:650px;
+margin:auto;
+color:#888;
+font-size:15px;
+}
 
-    /* FOOTER */
 
-    footer {
-      padding: 40px;
-      text-align: center;
-      border-top: 1px solid #1c1c1c;
-      color: #555555;
-      font-size: 11px;
-      letter-spacing: 1px;
-    }
+/* GALLERY */
 
-    /* MOBILE */
+.gallery-section{
+padding:90px 7%;
+}
 
-    @media (max-width: 800px) {
 
-      header {
-        min-height: 60vh;
-      }
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+max-width:1500px;
+margin:auto;
+}
 
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-      }
 
-      .gallery-section {
-        padding: 60px 5%;
-      }
+.project{
+aspect-ratio:1/1;
+background:#0d0d0d;
+border:1px solid #252525;
+position:relative;
+overflow:hidden;
+transition:.4s ease;
+}
 
-    }
 
-    @media (max-width: 500px) {
+.project:hover{
+border-color:#666;
+transform:translateY(-4px);
+}
 
-      .gallery {
-        grid-template-columns: 1fr;
-      }
 
-    }
+.project img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:.4s ease;
+}
 
-  </style>
+
+.project:hover img{
+transform:scale(1.03);
+}
+
+
+.project-title{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:35px 20px 18px;
+background:linear-gradient(transparent,rgba(0,0,0,.85));
+font-size:12px;
+letter-spacing:1px;
+}
+
+
+footer{
+padding:40px;
+text-align:center;
+border-top:1px solid #1c1c1c;
+color:#555;
+font-size:11px;
+letter-spacing:1px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.gallery{
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.gallery-section{
+padding:60px 5%;
+}
+
+}
+
+
+@media(max-width:500px){
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-  <!-- HEADER -->
 
-  <header>
+<header>
 
-    <div class="hero-content">
+<div class="hero-content">
 
-      <a href="index.html" class="back">
-        ← Back to Portfolio
-      </a>
-
-      <div class="category-label">
-        Selected Work
-      </div>
-
-      <h1>Creative Design</h1>
-
-      <p class="intro">
-        A selection of creative design projects developed through
-        experimentation, visual concepts, and artistic exploration.
-      </p>
-
-    </div>
-
-  </header>
+<a href="index.html" class="back">
+← Back to Portfolio
+</a>
 
 
-  <!-- 18 PROJECTS -->
-
-  <section class="gallery-section">
-
-    <div class="gallery">
-
-      <div class="project">
-        <img src="creative-01.jpg" alt="Creative Design Project 01">
-        <div class="project-title">Project 01</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-02.jpg" alt="Creative Design Project 02">
-        <div class="project-title">Project 02</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-03.jpg" alt="Creative Design Project 03">
-        <div class="project-title">Project 03</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-04.jpg" alt="Creative Design Project 04">
-        <div class="project-title">Project 04</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-05.jpg" alt="Creative Design Project 05">
-        <div class="project-title">Project 05</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-06.jpg" alt="Creative Design Project 06">
-        <div class="project-title">Project 06</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-07.jpg" alt="Creative Design Project 07">
-        <div class="project-title">Project 07</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-08.jpg" alt="Creative Design Project 08">
-        <div class="project-title">Project 08</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-09.jpg" alt="Creative Design Project 09">
-        <div class="project-title">Project 09</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-10.jpg" alt="Creative Design Project 10">
-        <div class="project-title">Project 10</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-11.jpg" alt="Creative Design Project 11">
-        <div class="project-title">Project 11</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-12.jpg" alt="Creative Design Project 12">
-        <div class="project-title">Project 12</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-13.jpg" alt="Creative Design Project 13">
-        <div class="project-title">Project 13</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-14.jpg" alt="Creative Design Project 14">
-        <div class="project-title">Project 14</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-15.jpg" alt="Creative Design Project 15">
-        <div class="project-title">Project 15</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-16.jpg" alt="Creative Design Project 16">
-        <div class="project-title">Project 16</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-17.jpg" alt="Creative Design Project 17">
-        <div class="project-title">Project 17</div>
-      </div>
-
-      <div class="project">
-        <img src="creative-18.jpg" alt="Creative Design Project 18">
-        <div class="project-title">Project 18</div>
-      </div>
-
-    </div>
-
-  </section>
+<div class="category-label">
+Selected Work
+</div>
 
 
-  <!-- FOOTER -->
+<h1>Creative Design</h1>
 
-  <footer>
-    © 2026 BITA NEGAHDAR
-  </footer>
+
+<p class="intro">
+A selection of creative design projects developed through experimentation,
+visual concepts, and artistic exploration.
+</p>
+
+
+</div>
+
+</header>
+
+
+<section class="gallery-section">
+
+<div class="gallery">
+  <div class="project"><img src="creativity (1).jpg"><div class="project-title">Project 01</div></div>
+<div class="project"><img src="creativity (2).jpg"><div class="project-title">Project 02</div></div>
+<div class="project"><img src="creativity (3).jpg"><div class="project-title">Project 03</div></div>
+<div class="project"><img src="creativity (4).jpg"><div class="project-title">Project 04</div></div>
+<div class="project"><img src="creativity (5).jpg"><div class="project-title">Project 05</div></div>
+<div class="project"><img src="creativity (6).jpg"><div class="project-title">Project 06</div></div>
+<div class="project"><img src="creativity (7).jpg"><div class="project-title">Project 07</div></div>
+<div class="project"><img src="creativity (8).jpg"><div class="project-title">Project 08</div></div>
+<div class="project"><img src="creativity (9).jpg"><div class="project-title">Project 09</div></div>
+
+<div class="project"><img src="creativity (10).jpg"><div class="project-title">Project 10</div></div>
+<div class="project"><img src="creativity (11).jpg"><div class="project-title">Project 11</div></div>
+<div class="project"><img src="creativity (12).jpg"><div class="project-title">Project 12</div></div>
+<div class="project"><img src="creativity (13).jpg"><div class="project-title">Project 13</div></div>
+<div class="project"><img src="creativity (14).jpg"><div class="project-title">Project 14</div></div>
+<div class="project"><img src="creativity (15).jpg"><div class="project-title">Project 15</div></div>
+<div class="project"><img src="creativity (16).jpg"><div class="project-title">Project 16</div></div>
+<div class="project"><img src="creativity (17).jpg"><div class="project-title">Project 17</div></div>
+<div class="project"><img src="creativity (18).jpg"><div class="project-title">Project 18</div></div>
+
+
+</div>
+
+</section>
+
+
+<footer>
+© 2026 BITA NEGAHDAR
+</footer>
+
 
 </body>
 </html>
