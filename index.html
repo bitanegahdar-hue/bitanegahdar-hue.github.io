@@ -11,10 +11,10 @@
 <style>
 
 :root {
-    --bg: #ffffff;
-    --text: #111111;
-    --muted: #777777;
-    --line: #e6e6e6;
+    --bg: #050505;
+    --text: #f5f5f5;
+    --muted: #8a8a8a;
+    --line: #202020;
     --accent: #0891B2;
     --accent-hover: #06B6D4;
 }
@@ -59,8 +59,8 @@ body::before {
     pointer-events: none;
     opacity: 0.13;
     background-image:
-        linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
     background-size: 80px 80px;
     z-index: -2;
 }
@@ -73,7 +73,7 @@ body::after {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    opacity: 0.025;
+    opacity: 0.035;
     z-index: 20;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
 }
@@ -92,9 +92,9 @@ nav {
     align-items: center;
     justify-content: space-between;
     z-index: 100;
-    background: rgba(255,255,255,0.88);
+    background: rgba(5,5,5,0.82);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .nav-logo img {
@@ -114,7 +114,7 @@ nav {
     font-size: 11px;
     letter-spacing: 1.8px;
     text-transform: uppercase;
-    color: #777;
+    color: #888;
     transition: color .3s ease;
 }
 
@@ -131,7 +131,7 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #111;
+    color: #fff;
 }
 
 .nav-links a:hover::after,
@@ -166,13 +166,13 @@ section {
 }
 
 .section-number {
-    color: #aaa;
+    color: #555;
     font-size: 10px;
     letter-spacing: 2px;
 }
 
 
-/* HERO */
+/* HERO — WHITE SLIDE ONLY */
 
 .hero {
     min-height: 100vh;
@@ -182,6 +182,9 @@ section {
     justify-content: center;
     position: relative;
     overflow: hidden;
+
+    background: #ffffff;
+    color: #111111;
 }
 
 .hero-small {
@@ -211,16 +214,16 @@ section {
 
 .hero-title span {
     display: block;
-    color: #111;
+    color: #111111;
 }
 
 .hero-title .outline {
-    color: #111;
+    color: #111111;
     -webkit-text-stroke: 0;
 }
 
 
-/* ORBIT */
+/* HERO ORBIT */
 
 .hero-orbit {
     position: absolute;
@@ -304,7 +307,7 @@ section {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #999;
+    color: #888;
     font-size: 9px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -336,7 +339,7 @@ section {
     line-height: .8;
     letter-spacing: -12px;
     font-weight: 700;
-    color: #111;
+    color: #fff;
 }
 
 .about-stat-label {
@@ -354,13 +357,13 @@ section {
 .about-text p {
     font-size: clamp(21px, 2.1vw, 32px);
     line-height: 1.45;
-    color: #666;
+    color: #bdbdbd;
     margin-bottom: 38px;
     font-weight: 300;
 }
 
 .about-text p:first-child {
-    color: #111;
+    color: #fff;
 }
 
 .about-line {
@@ -405,7 +408,6 @@ section {
 .education-title {
     font-size: clamp(22px, 2.5vw, 36px);
     letter-spacing: -1px;
-    color: #111;
 }
 
 .education-place {
@@ -440,7 +442,7 @@ section {
     font-weight: 700;
     letter-spacing: -4px;
     text-transform: uppercase;
-    color: #111;
+    color: #f5f5f5;
     padding-right: 80px;
 }
 
@@ -473,7 +475,7 @@ section {
 .portfolio-image {
     position: relative;
     overflow: hidden;
-    background: #f2f2f2;
+    background: #111;
     aspect-ratio: 4 / 3;
 }
 
@@ -498,7 +500,7 @@ section {
     padding: 25px;
     background: linear-gradient(
         transparent 45%,
-        rgba(255,255,255,.88)
+        rgba(0,0,0,.75)
     );
     opacity: 0;
     transition: opacity .45s ease;
@@ -511,18 +513,17 @@ section {
 .portfolio-number {
     font-size: 10px;
     letter-spacing: 2px;
-    color: #555;
+    color: #ccc;
 }
 
 .portfolio-arrow {
     width: 48px;
     height: 48px;
-    border: 1px solid rgba(0,0,0,.25);
+    border: 1px solid rgba(255,255,255,.35);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    color: #111;
     transition: all .35s ease;
 }
 
@@ -543,7 +544,6 @@ section {
 .portfolio-title {
     font-size: 26px;
     letter-spacing: -1px;
-    color: #111;
 }
 
 .portfolio-type {
@@ -570,12 +570,12 @@ section {
     text-transform: uppercase;
     margin-bottom: 65px;
     font-weight: 700;
-    color: #111;
+    color: #fff;
 }
 
 .contact-heading span,
 .contact-heading .contact-accent {
-    color: #111;
+    color: #fff;
     -webkit-text-stroke: 0;
 }
 
@@ -621,7 +621,7 @@ section {
 
 .contact-label {
     display: block;
-    color: #888;
+    color: #555;
     font-size: 9px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -630,7 +630,7 @@ section {
 
 .contact-value {
     font-size: clamp(17px, 2vw, 25px);
-    color: #333;
+    color: #ddd;
     transition: color .3s ease;
 }
 
@@ -640,7 +640,7 @@ section {
 
 .contact-arrow {
     float: right;
-    color: #888;
+    color: #555;
     font-size: 20px;
     transition: transform .3s ease, color .3s ease;
 }
@@ -659,7 +659,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #777;
+    color: #555;
     font-size: 9px;
     letter-spacing: 2px;
     text-transform: uppercase;
