@@ -11,10 +11,10 @@
 <style>
 
 :root {
-    --bg: #050505;
+    --bg: #121212;
     --text: #f5f5f5;
     --muted: #8a8a8a;
-    --line: #202020;
+    --line: #292929;
     --accent: #0891B2;
     --accent-hover: #06B6D4;
 }
@@ -92,7 +92,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     z-index: 100;
-    background: rgba(5,5,5,0.82);
+    background: rgba(18,18,18,0.82);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255,255,255,0.06);
 }
@@ -172,7 +172,7 @@ section {
 }
 
 
-/* HERO — WHITE SLIDE ONLY */
+/* HERO */
 
 .hero {
     min-height: 100vh;
@@ -182,7 +182,6 @@ section {
     justify-content: center;
     position: relative;
     overflow: hidden;
-
     background: #ffffff;
     color: #111111;
 }
@@ -223,41 +222,73 @@ section {
 }
 
 
-/* HERO ORBIT */
+/* ORBIT — CENTERED */
 
 .hero-orbit {
     position: absolute;
-    width: 480px;
-    height: 480px;
-    right: 4vw;
-    top: 18%;
-    border: 1px solid rgba(0,0,0,.08);
+
+    width: 520px;
+    height: 520px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 2px solid rgba(0,0,0,.16);
+
     border-radius: 50%;
+
     animation: rotate 24s linear infinite;
+
     pointer-events: none;
+
+    z-index: 1;
 }
 
 .hero-orbit::before {
     content: "";
     position: absolute;
-    width: 10px;
-    height: 10px;
+
+    width: 11px;
+    height: 11px;
+
     background: var(--accent);
+
     border-radius: 50%;
+
     top: 50%;
-    left: -5px;
-    box-shadow: 0 0 25px rgba(8,145,178,.35);
+    left: -6px;
+
+    box-shadow:
+        0 0 20px rgba(8,145,178,.55),
+        0 0 35px rgba(8,145,178,.25);
 }
 
 .hero-orbit::after {
     content: "";
     position: absolute;
-    width: 260px;
-    height: 260px;
-    border: 1px solid rgba(8,145,178,.22);
+
+    width: 270px;
+    height: 270px;
+
+    border: 2px solid rgba(8,145,178,.24);
+
     border-radius: 50%;
-    top: 110px;
-    left: 110px;
+
+    top: 123px;
+    left: 123px;
+}
+
+
+/* HERO CONTENT ABOVE ORBIT */
+
+.hero-small,
+.hero-title,
+.hero-bottom,
+.scroll-indicator {
+    position: relative;
+    z-index: 3;
 }
 
 .hero-bottom {
@@ -265,8 +296,6 @@ section {
     justify-content: space-between;
     align-items: flex-end;
     margin-top: 55px;
-    position: relative;
-    z-index: 3;
     opacity: 0;
     transform: translateY(25px);
     animation: reveal .9s .8s forwards;
@@ -695,11 +724,11 @@ footer span {
 
 @keyframes rotate {
     from {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 
     to {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
@@ -728,11 +757,18 @@ footer span {
     }
 
     .hero-orbit {
-        width: 300px;
-        height: 300px;
-        right: -80px;
-        top: 25%;
-        opacity: .45;
+        width: 340px;
+        height: 340px;
+        left: 50%;
+        top: 50%;
+        opacity: .8;
+    }
+
+    .hero-orbit::after {
+        width: 175px;
+        height: 175px;
+        top: 81px;
+        left: 81px;
     }
 
     .about-grid {
@@ -811,6 +847,18 @@ footer span {
     .hero-title {
         font-size: clamp(52px, 16vw, 100px);
         letter-spacing: -4px;
+    }
+
+    .hero-orbit {
+        width: 270px;
+        height: 270px;
+    }
+
+    .hero-orbit::after {
+        width: 140px;
+        height: 140px;
+        top: 63px;
+        left: 63px;
     }
 
     .hero-bottom {
