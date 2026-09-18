@@ -16,8 +16,8 @@
     --line: #202020;
     --accent: #0891B2;
     --accent-hover: #06B6D4;
-    --white-soft: #d8d8d8;
 }
+
 
 /* RESET */
 
@@ -208,18 +208,58 @@ section {
     animation: reveal 1.1s .35s forwards;
 }
 
+
+/* BOTH NAME LINES WHITE */
+
 .hero-title span {
     display: block;
+    color: #fff;
 }
+
+
+/* NO OUTLINE */
 
 .hero-title .outline {
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255,255,255,.45);
+    color: #fff;
+    -webkit-text-stroke: 0;
 }
 
-.hero-title .accent-word {
-    color: var(--accent);
-    -webkit-text-stroke: 0;
+
+/* ORBIT */
+
+.hero-orbit {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    right: 4vw;
+    top: 18%;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+    animation: rotate 24s linear infinite;
+    pointer-events: none;
+}
+
+.hero-orbit::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    top: 50%;
+    left: -5px;
+    box-shadow: 0 0 25px rgba(8,145,178,.7);
+}
+
+.hero-orbit::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border: 1px solid rgba(8,145,178,.22);
+    border-radius: 50%;
+    top: 110px;
+    left: 110px;
 }
 
 .hero-bottom {
@@ -260,41 +300,6 @@ section {
 
 .hero-social a:hover {
     color: var(--accent);
-}
-
-.hero-orbit {
-    position: absolute;
-    width: 480px;
-    height: 480px;
-    right: 4vw;
-    top: 18%;
-    border: 1px solid rgba(255,255,255,.08);
-    border-radius: 50%;
-    animation: rotate 24s linear infinite;
-    pointer-events: none;
-}
-
-.hero-orbit::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: var(--accent);
-    border-radius: 50%;
-    top: 50%;
-    left: -5px;
-    box-shadow: 0 0 25px rgba(8,145,178,.7);
-}
-
-.hero-orbit::after {
-    content: "";
-    position: absolute;
-    width: 260px;
-    height: 260px;
-    border: 1px solid rgba(8,145,178,.22);
-    border-radius: 50%;
-    top: 110px;
-    left: 110px;
 }
 
 .scroll-indicator {
@@ -450,7 +455,7 @@ section {
 }
 
 
-/* SKILLS */
+/* SKILLS — SIMPLE SOLID VERSION */
 
 .skills-section {
     overflow: hidden;
@@ -465,29 +470,21 @@ section {
 .skills-track {
     display: flex;
     width: max-content;
-    animation: marquee 28s linear infinite;
+    animation: marquee 32s linear infinite;
     margin-top: 65px;
 }
 
 .skills-track span {
-    font-size: clamp(50px, 8vw, 120px);
+    font-size: clamp(45px, 7vw, 100px);
     font-weight: 700;
-    letter-spacing: -5px;
+    letter-spacing: -4px;
     text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 1px #333;
-    padding-right: 45px;
-    transition: color .3s ease, -webkit-text-stroke .3s ease;
-}
-
-.skills-track span:nth-child(even) {
-    color: #111;
+    color: #f5f5f5;
+    padding-right: 80px;
 }
 
 .skills-track span::after {
-    content: " / ";
-    color: var(--accent);
-    -webkit-text-stroke: 0;
+    content: "";
 }
 
 
@@ -603,23 +600,25 @@ section {
     justify-content: center;
 }
 
+
+/* SMALLER + ALL SOLID */
+
 .contact-heading {
-    font-size: clamp(70px, 14vw, 190px);
-    line-height: .82;
-    letter-spacing: -9px;
+    font-size: clamp(42px, 7vw, 88px);
+    line-height: .9;
+    letter-spacing: -4px;
     text-transform: uppercase;
-    margin-bottom: 80px;
+    margin-bottom: 65px;
+    font-weight: 700;
+    color: #fff;
 }
 
-.contact-heading span {
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255,255,255,.4);
-}
-
+.contact-heading span,
 .contact-heading .contact-accent {
-    color: var(--accent);
+    color: #fff;
     -webkit-text-stroke: 0;
 }
+
 
 .contact-grid {
     display: grid;
@@ -896,8 +895,9 @@ footer span {
     }
 
     .skills-track span {
-        font-size: 60px;
+        font-size: 55px;
         letter-spacing: -3px;
+        padding-right: 55px;
     }
 
     .portfolio-grid {
@@ -909,9 +909,9 @@ footer span {
     }
 
     .contact-heading {
-        font-size: clamp(60px, 17vw, 100px);
-        letter-spacing: -5px;
-        margin-bottom: 55px;
+        font-size: 43px;
+        letter-spacing: -2px;
+        margin-bottom: 50px;
     }
 
     .contact-value {
@@ -942,11 +942,17 @@ footer span {
     </a>
 
     <div class="nav-links">
+
         <a href="#about">About</a>
+
         <a href="#education">Education</a>
+
         <a href="#skills">Skills</a>
+
         <a href="#portfolio">Portfolio</a>
+
         <a href="#contact">Contact</a>
+
     </div>
 
 </nav>
@@ -964,19 +970,27 @@ footer span {
     </div>
 
     <h1 class="hero-title">
+
         <span>BITA</span>
-        <span class="outline">NEGAHDAR</span>
-        <span class="accent-word">DESIGN</span>
+
+        <span>NEGAHDAR</span>
+
     </h1>
+
 
     <div class="hero-bottom">
 
         <div class="hero-role">
+
             <strong>Developing a Professional Career Path</strong><br>
+
             in Psychology, Counseling, and Human Resources.
+
         </div>
 
+
         <div class="hero-social">
+
             <a href="https://www.instagram.com/bitanegahdar.ir/" target="_blank">
                 Instagram
             </a>
@@ -988,13 +1002,18 @@ footer span {
             <a href="mailto:bitanegahdar@gmail.com">
                 Email
             </a>
+
         </div>
 
     </div>
 
+
     <div class="scroll-indicator">
+
         <div class="scroll-line"></div>
+
         Scroll to explore
+
     </div>
 
 </section>
@@ -1006,9 +1025,13 @@ footer span {
 <section id="about">
 
     <div class="section-label">
+
         <span class="section-number">01</span>
+
         About
+
     </div>
+
 
     <div class="about-grid reveal">
 
@@ -1054,11 +1077,16 @@ footer span {
 <section id="education">
 
     <div class="section-label">
+
         <span class="section-number">02</span>
+
         Education
+
     </div>
 
+
     <div class="education-list reveal">
+
 
         <div class="education-item">
 
@@ -1138,35 +1166,79 @@ footer span {
 <section id="training">
 
     <div class="section-label">
+
         <span class="section-number">03</span>
+
         Relevant Studies & Training
+
     </div>
+
 
     <div class="training-list reveal">
 
-        <div class="training-item">
-            <div class="training-number">01</div>
-            <div class="training-name">Schema Therapy</div>
-        </div>
 
         <div class="training-item">
-            <div class="training-number">02</div>
-            <div class="training-name">Cognitive Behavioral Therapy — CBT</div>
+
+            <div class="training-number">
+                01
+            </div>
+
+            <div class="training-name">
+                Schema Therapy
+            </div>
+
         </div>
 
-        <div class="training-item">
-            <div class="training-number">03</div>
-            <div class="training-name">QEEG Brain Mapping Workshop</div>
-        </div>
 
         <div class="training-item">
-            <div class="training-number">04</div>
-            <div class="training-name">Acceptance and Commitment Therapy — ACT</div>
+
+            <div class="training-number">
+                02
+            </div>
+
+            <div class="training-name">
+                Cognitive Behavioral Therapy — CBT
+            </div>
+
         </div>
 
+
         <div class="training-item">
-            <div class="training-number">05</div>
-            <div class="training-name">Suicide Crisis Management</div>
+
+            <div class="training-number">
+                03
+            </div>
+
+            <div class="training-name">
+                QEEG Brain Mapping Workshop
+            </div>
+
+        </div>
+
+
+        <div class="training-item">
+
+            <div class="training-number">
+                04
+            </div>
+
+            <div class="training-name">
+                Acceptance and Commitment Therapy — ACT
+            </div>
+
+        </div>
+
+
+        <div class="training-item">
+
+            <div class="training-number">
+                05
+            </div>
+
+            <div class="training-name">
+                Suicide Crisis Management
+            </div>
+
         </div>
 
     </div>
@@ -1182,8 +1254,13 @@ footer span {
     <div class="skills-header">
 
         <div class="section-label">
-            <span class="section-number">04</span>
+
+            <span class="section-number">
+                04
+            </span>
+
             Skills
+
         </div>
 
     </div>
@@ -1222,8 +1299,13 @@ footer span {
 <section id="portfolio">
 
     <div class="section-label">
-        <span class="section-number">05</span>
+
+        <span class="section-number">
+            05
+        </span>
+
         Selected Work
+
     </div>
 
 
@@ -1232,11 +1314,27 @@ footer span {
 
         <!-- PACKAGING -->
 
-        <a href="packaging.html" class="portfolio-item">
+        <a href="https://bitanegahdar.com/packaging.html"
+           class="portfolio-item">
 
             <div class="portfolio-image">
 
-                <img src="Packaging.jpg" alt="Packaging Design">
+                <img
+                    id="packagingCover"
+                    src="Packaging.jpg"
+                    alt="Packaging Design"
+                    onerror="
+                        if(this.dataset.try === '1'){
+                            this.dataset.try='2';
+                            this.src='Packaging.JPG';
+                        } else if(this.dataset.try === '2'){
+                            this.dataset.try='3';
+                            this.src='Packaging.png';
+                        } else {
+                            this.style.display='none';
+                        }
+                    "
+                >
 
                 <div class="portfolio-overlay">
 
@@ -1251,6 +1349,7 @@ footer span {
                 </div>
 
             </div>
+
 
             <div class="portfolio-info">
 
@@ -1270,11 +1369,15 @@ footer span {
 
         <!-- PRINTING -->
 
-        <a href="printing.html" class="portfolio-item">
+        <a href="printing.html"
+           class="portfolio-item">
 
             <div class="portfolio-image">
 
-                <img src="cover printing.jpg" alt="Printing Design">
+                <img
+                    src="cover printing.jpg"
+                    alt="Printing Design"
+                >
 
                 <div class="portfolio-overlay">
 
@@ -1289,6 +1392,7 @@ footer span {
                 </div>
 
             </div>
+
 
             <div class="portfolio-info">
 
@@ -1308,11 +1412,15 @@ footer span {
 
         <!-- LOGO -->
 
-        <a href="logo.html" class="portfolio-item">
+        <a href="logo.html"
+           class="portfolio-item">
 
             <div class="portfolio-image">
 
-                <img src="cover logo.jpg" alt="Logo Design">
+                <img
+                    src="cover logo.jpg"
+                    alt="Logo Design"
+                >
 
                 <div class="portfolio-overlay">
 
@@ -1327,6 +1435,7 @@ footer span {
                 </div>
 
             </div>
+
 
             <div class="portfolio-info">
 
@@ -1346,11 +1455,15 @@ footer span {
 
         <!-- CREATIVE -->
 
-        <a href="creative.html" class="portfolio-item">
+        <a href="creative.html"
+           class="portfolio-item">
 
             <div class="portfolio-image">
 
-                <img src="cover creativity.jpg" alt="Creative Design">
+                <img
+                    src="cover creativity.jpg"
+                    alt="Creative Design"
+                >
 
                 <div class="portfolio-overlay">
 
@@ -1365,6 +1478,7 @@ footer span {
                 </div>
 
             </div>
+
 
             <div class="portfolio-info">
 
@@ -1391,23 +1505,32 @@ footer span {
 <section class="contact-section" id="contact">
 
     <div class="section-label">
-        <span class="section-number">06</span>
+
+        <span class="section-number">
+            06
+        </span>
+
         Contact
+
     </div>
 
 
     <h2 class="contact-heading reveal">
-        LET’S <span>WORK</span><br>
-        <span class="contact-accent">TOGETHER</span>
+
+        LET’S WORK<br>
+
+        TOGETHER
+
     </h2>
 
 
     <div class="contact-grid reveal">
 
 
-        <!-- EMAIL -->
-
-        <a href="mailto:bitanegahdar@gmail.com" class="contact-item">
+        <a
+            href="mailto:bitanegahdar@gmail.com"
+            class="contact-item"
+        >
 
             <span class="contact-label">
                 Email
@@ -1425,9 +1548,10 @@ footer span {
 
 
 
-        <!-- PHONE -->
-
-        <a href="tel:+989119382619" class="contact-item">
+        <a
+            href="tel:+989119382619"
+            class="contact-item"
+        >
 
             <span class="contact-label">
                 Phone
@@ -1445,9 +1569,11 @@ footer span {
 
 
 
-        <!-- LINKEDIN -->
-
-        <a href="https://www.linkedin.com/in/bita-negahdar/" target="_blank" class="contact-item">
+        <a
+            href="https://www.linkedin.com/in/bita-negahdar/"
+            target="_blank"
+            class="contact-item"
+        >
 
             <span class="contact-label">
                 LinkedIn
@@ -1465,9 +1591,11 @@ footer span {
 
 
 
-        <!-- INSTAGRAM -->
-
-        <a href="https://www.instagram.com/bitanegahdar.ir/" target="_blank" class="contact-item">
+        <a
+            href="https://www.instagram.com/bitanegahdar.ir/"
+            target="_blank"
+            class="contact-item"
+        >
 
             <span class="contact-label">
                 Instagram
@@ -1511,6 +1639,7 @@ footer span {
 
 <script>
 
+
 /* SCROLL REVEAL */
 
 const revealElements = document.querySelectorAll(".reveal");
@@ -1535,7 +1664,9 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealElements.forEach(element => {
+
     revealObserver.observe(element);
+
 });
 
 
@@ -1558,17 +1689,24 @@ window.addEventListener("scroll", () => {
             window.scrollY >= sectionTop &&
             window.scrollY < sectionTop + sectionHeight
         ) {
+
             current = section.getAttribute("id");
+
         }
 
     });
+
 
     navLinks.forEach(link => {
 
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === "#" + current) {
+        if (
+            link.getAttribute("href") === "#" + current
+        ) {
+
             link.classList.add("active");
+
         }
 
     });
@@ -1585,8 +1723,11 @@ window.addEventListener("mousemove", event => {
 
     if (!orbit) return;
 
-    const x = (event.clientX / window.innerWidth - 0.5) * 18;
-    const y = (event.clientY / window.innerHeight - 0.5) * 18;
+    const x =
+        (event.clientX / window.innerWidth - 0.5) * 18;
+
+    const y =
+        (event.clientY / window.innerHeight - 0.5) * 18;
 
     orbit.style.marginLeft = x + "px";
     orbit.style.marginTop = y + "px";
@@ -1595,21 +1736,27 @@ window.addEventListener("mousemove", event => {
 
 
 
-/* PAUSE SKILLS MARQUEE WHEN HOVERED */
+/* PAUSE SKILLS MARQUEE */
 
 const skillsTrack = document.querySelector(".skills-track");
 
 if (skillsTrack) {
 
     skillsTrack.addEventListener("mouseenter", () => {
+
         skillsTrack.style.animationPlayState = "paused";
+
     });
 
+
     skillsTrack.addEventListener("mouseleave", () => {
+
         skillsTrack.style.animationPlayState = "running";
+
     });
 
 }
+
 
 </script>
 
