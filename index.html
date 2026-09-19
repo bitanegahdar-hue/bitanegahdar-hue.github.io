@@ -1636,20 +1636,44 @@ window.addEventListener("scroll", () => {
 
 const orbit = document.querySelector(".hero-orbit");
 
-window.addEventListener("mousemove", event => {
+if (orbit) {
 
-    if (!orbit) return;
+    /* DESKTOP — MOUSE */
 
-    const x =
-        (event.clientX / window.innerWidth - 0.5) * 18;
+    window.addEventListener("mousemove", event => {
 
-    const y =
-        (event.clientY / window.innerHeight - 0.5) * 18;
+        const x =
+            (event.clientX / window.innerWidth - 0.5) * 18;
 
-    orbit.style.marginLeft = x + "px";
-    orbit.style.marginTop = y + "px";
+        const y =
+            (event.clientY / window.innerHeight - 0.5) * 18;
 
-});
+        orbit.style.marginLeft = x + "px";
+        orbit.style.marginTop = y + "px";
+
+    });
+
+
+    /* MOBILE — FINGER */
+
+    window.addEventListener("touchmove", event => {
+
+        if (!event.touches.length) return;
+
+        const touch = event.touches[0];
+
+        const x =
+            (touch.clientX / window.innerWidth - 0.5) * 18;
+
+        const y =
+            (touch.clientY / window.innerHeight - 0.5) * 18;
+
+        orbit.style.marginLeft = x + "px";
+        orbit.style.marginTop = y + "px";
+
+    }, { passive: true });
+
+}
 
 
 
