@@ -1532,3 +1532,657 @@ footer a:hover {
     .portfolio-title {
         font-size: 24px;
     }
+
+    .portfolio-type {
+        text-align: left;
+    }
+
+    .portfolio-arrow {
+        opacity: 1;
+        transform: none;
+        width: 38px;
+        height: 38px;
+    }
+
+    .feature-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .feature-layout h2 {
+        font-size: clamp(42px, 11vw, 70px);
+    }
+
+    .feature-art {
+        min-height: 260px;
+    }
+
+    .contact-section {
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+
+    .contact-topline {
+        font-size: 8px;
+        margin-bottom: 38px;
+    }
+
+    .contact-heading {
+        font-size: clamp(54px, 14.8vw, 90px);
+        margin-bottom: 42px;
+    }
+
+    .contact-heading span:last-child {
+        margin-left: 4%;
+    }
+
+    .contact-cta-row {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px 0 30px;
+    }
+
+    .contact-cta-copy {
+        font-size: 12px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        margin-top: 32px;
+    }
+
+    .contact-item {
+        grid-template-columns: 75px 1fr 18px;
+        gap: 8px;
+        padding: 18px 0;
+    }
+
+    .contact-value {
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 24px 6vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="custom-cursor" id="customCursor"></div>
+<div class="cursor-label" id="cursorLabel">Explore</div>
+
+<div class="site-shell">
+
+    <!-- NAVIGATION -->
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="#top" class="nav-logo" aria-label="Bita Negahdar home">
+            <img src="logo.png" alt="Bita Negahdar" onerror="this.style.display='none'">
+            <span>BITA NEGAHDAR.</span>
+        </a>
+
+        <div class="nav-right">
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Selected Work</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <a href="#contact" class="nav-contact">Start a project ↗</a>
+
+            <button class="menu-toggle" id="menuToggle" type="button"
+                    aria-label="Open navigation menu" aria-expanded="false">
+                +
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="top">
+        <div class="hero-topline">
+            <span>Independent Creative Practice</span>
+            <span>Design · Print · Identity</span>
+        </div>
+
+        <div class="hero-orbit" aria-hidden="true">
+            <span class="orbit-dot"></span>
+        </div>
+
+        <h1 class="hero-title">
+            <span>BITA</span>
+            <span class="title-outline">NEGAHDAR</span>
+        </h1>
+
+        <div class="hero-bottom">
+            <div class="hero-intro">
+                <strong>Graphic Designer & Brand Consultant</strong>
+                Creating visual identities, printed matter and packaging with a focus on clarity, detail and purpose.
+            </div>
+
+            <div class="hero-social">
+                <a href="https://www.instagram.com/bitanegahdar.ir/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+                <a href="https://www.linkedin.com/in/bita-negahdar/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                <a href="mailto:bitanegahdar@gmail.com">Email ↗</a>
+            </div>
+
+            <div class="scroll-note">
+                <span class="scroll-line"></span>
+                Scroll to explore
+            </div>
+        </div>
+    </header>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+        <div class="section-meta">
+            <div class="section-meta-left">
+                <span class="section-number">01 /</span>
+                <span>What I Do</span>
+            </div>
+            <div class="section-meta-right">Selected services</div>
+        </div>
+
+        <div class="services-heading reveal">
+            <h2>Design with<br>intention.</h2>
+            <p>From the first idea to the final printed piece, each project is shaped around its message, context and audience.</p>
+        </div>
+
+        <div class="services-layout">
+            <div class="services-list reveal">
+                <a href="printing.html" class="service-link">
+                    <span class="service-index">01</span>
+                    <span class="service-name">Printing</span>
+                    <span class="round-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="#contact" class="service-link">
+                    <span class="service-index">02</span>
+                    <span class="service-name">UI/UX Design</span>
+                    <span class="round-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="logo.html" class="service-link">
+                    <span class="service-index">03</span>
+                    <span class="service-name">Brand Identity</span>
+                    <span class="round-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="https://bitanegahdar.com/packaging.html" class="service-link">
+                    <span class="service-index">04</span>
+                    <span class="service-name">Packaging Design</span>
+                    <span class="round-arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+            <div class="services-visual reveal">
+                <div class="services-visual-frame">
+                    <img
+                        src="cover Packaging.jpg"
+                        alt="Selected packaging design project"
+                        loading="eager"
+                        onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='Packaging.JPG';}else if(this.dataset.fallback==='1'){this.dataset.fallback='2';this.src='Packaging.png';}else{this.style.display='none';}"
+                    >
+                </div>
+                <div class="visual-marker" aria-hidden="true">↗</div>
+                <div class="connector-line" aria-hidden="true"></div>
+                <div class="visual-caption">
+                    <span>Visual systems & applications</span>
+                    <span>Selected project / 01</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="section-meta">
+            <div class="section-meta-left">
+                <span class="section-number">02 /</span>
+                <span>About Us</span>
+            </div>
+            <div class="section-meta-right">Background & approach</div>
+        </div>
+
+        <div class="about-grid reveal">
+            <div class="about-stat">
+                <div class="about-stat-number">15+</div>
+                <div class="about-stat-label">Years of Professional Experience</div>
+            </div>
+
+            <div class="about-text">
+                <h2>A practice built around images, ideas and identity.</h2>
+
+                <p>
+                    I am a graphic designer and brand consultant with more than fifteen years of professional experience across design studios, agencies and a range of industries.
+                </p>
+
+                <p>
+                    My work spans <strong>visual identity, packaging, printing and communication design</strong> — bringing together concept, visual language and practical production requirements.
+                </p>
+
+                <p>
+                    Alongside my design practice, I am developing an academic path in psychology. This ongoing interest informs the way I think about visual culture, identity, perception and human behavior.
+                </p>
+
+                <div class="about-quote">
+                    Good design is not only what we see. It is how an idea becomes clear, meaningful and recognizable.
+                </div>
+
+                <!-- EDUCATION IS INTENTIONALLY NESTED INSIDE ABOUT -->
+                <div class="education-block" id="education">
+                    <div class="education-heading">
+                        <h3>Education</h3>
+                        <span>Academic background</span>
+                    </div>
+
+                    <div class="education-list">
+                        <div class="education-item">
+                            <div class="education-year">2024–2025</div>
+                            <div class="education-title">MBA — Strategic Marketing</div>
+                            <div class="education-place">University of Tehran</div>
+                        </div>
+
+                        <div class="education-item">
+                            <div class="education-year">2024–2026</div>
+                            <div class="education-title">MA — Psychology</div>
+                            <div class="education-place">Islamic Azad University</div>
+                        </div>
+
+                        <div class="education-item">
+                            <div class="education-year">2014–2016</div>
+                            <div class="education-title">MA — Photography</div>
+                            <div class="education-place">Tehran University of Art</div>
+                        </div>
+
+                        <div class="education-item">
+                            <div class="education-year">2003–2007</div>
+                            <div class="education-title">BA — Graphic Design</div>
+                            <div class="education-place">Graphic Design</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOVING TICKER -->
+    <div class="ticker" aria-label="Design services">
+        <div class="ticker-track">
+            <span>Printing</span><span class="ticker-star">✳</span>
+            <span>UI/UX Design</span><span class="ticker-star">✳</span>
+            <span>Brand Identity</span><span class="ticker-star">✳</span>
+            <span>Packaging Design</span><span class="ticker-star">✳</span>
+            <span>Printing</span><span class="ticker-star">✳</span>
+            <span>UI/UX Design</span><span class="ticker-star">✳</span>
+            <span>Brand Identity</span><span class="ticker-star">✳</span>
+            <span>Packaging Design</span><span class="ticker-star">✳</span>
+        </div>
+    </div>
+
+    <!-- SKILLS -->
+    <section class="skills-section" id="skills">
+        <div class="section-meta">
+            <div class="section-meta-left">
+                <span class="section-number">03 /</span>
+                <span>Tools & Skills</span>
+            </div>
+            <div class="section-meta-right">Creative workflow</div>
+        </div>
+
+        <div class="skills-intro reveal">
+            <h2>Ideas into<br>visual form.</h2>
+            <p>A flexible design workflow shaped by concept development, visual systems, production knowledge and digital tools.</p>
+        </div>
+
+        <div class="skills-track">
+            <div class="skills-track-inner">
+                <span>Photoshop</span>
+                <span>Illustrator</span>
+                <span>InDesign</span>
+                <span>Lightroom</span>
+                <span>CorelDRAW</span>
+                <span>Premiere</span>
+                <span>Edius</span>
+                <span>Figma</span>
+                <span>AI Tools</span>
+                <span>Photoshop</span>
+                <span>Illustrator</span>
+                <span>InDesign</span>
+                <span>Lightroom</span>
+                <span>CorelDRAW</span>
+                <span>Premiere</span>
+                <span>Edius</span>
+                <span>Figma</span>
+                <span>AI Tools</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SLIDESHOW -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="section-meta">
+            <div class="section-meta-left">
+                <span class="section-number">04 /</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="section-meta-right">Selected work</div>
+        </div>
+
+        <div class="portfolio-head reveal">
+            <h2>Selected<br>work.</h2>
+            <p>A selection of projects across packaging, print, identity and creative visual communication.</p>
+        </div>
+
+        <div class="portfolio-rail">
+            <div class="rail-dots" aria-hidden="true">
+                <div class="rail-progress" id="railProgress"></div>
+            </div>
+
+            <div class="slider-controls">
+                <button class="slider-button" id="slidePrev" type="button" aria-label="Previous projects">←</button>
+                <button class="slider-button" id="slideNext" type="button" aria-label="Next projects">→</button>
+            </div>
+        </div>
+
+        <div class="portfolio-track" id="portfolioTrack" tabindex="0" aria-label="Selected portfolio projects">
+            <a href="https://bitanegahdar.com/packaging.html" class="portfolio-item" aria-label="View packaging design projects">
+                <div class="portfolio-image">
+                    <img
+                        src="cover Packaging.jpg"
+                        alt="Packaging Design"
+                        loading="lazy"
+                        onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='Packaging.JPG';}else if(this.dataset.fallback==='1'){this.dataset.fallback='2';this.src='Packaging.png';}else{this.style.display='none';}"
+                    >
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-number">01 / 04</span>
+                        <span class="portfolio-arrow">↗</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-title">Packaging</div>
+                    <div class="portfolio-type">Industrial · Food</div>
+                </div>
+            </a>
+
+            <a href="printing.html" class="portfolio-item" aria-label="View printing design projects">
+                <div class="portfolio-image">
+                    <img src="cover printing.jpg" alt="Printing Design" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-number">02 / 04</span>
+                        <span class="portfolio-arrow">↗</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-title">Printing</div>
+                    <div class="portfolio-type">Editorial · Print</div>
+                </div>
+            </a>
+
+            <a href="logo.html" class="portfolio-item" aria-label="View logo and identity projects">
+                <div class="portfolio-image">
+                    <img src="cover logo.jpg" alt="Logo and Brand Identity" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-number">03 / 04</span>
+                        <span class="portfolio-arrow">↗</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-title">Logo & Identity</div>
+                    <div class="portfolio-type">Branding · Identity</div>
+                </div>
+            </a>
+
+            <a href="creative.html" class="portfolio-item" aria-label="View creative design projects">
+                <div class="portfolio-image">
+                    <img src="cover creativity.jpg" alt="Creative Design" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-number">04 / 04</span>
+                        <span class="portfolio-arrow">↗</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-title">Creative</div>
+                    <div class="portfolio-type">Art Direction · Visual</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- VISUAL FEATURE -->
+    <section class="feature-section">
+        <div class="section-meta">
+            <div class="section-meta-left">
+                <span class="section-number">05 /</span>
+                <span>Approach</span>
+            </div>
+            <div class="section-meta-right">Concept to execution</div>
+        </div>
+
+        <div class="feature-layout">
+            <div class="reveal">
+                <h2>Make the idea visible.</h2>
+                <p>
+                    From identity systems to packaging and print, every visual decision should serve the idea — and work in the real world.
+                </p>
+            </div>
+
+            <div class="feature-art reveal" aria-label="Abstract graphic design illustration">
+                <div class="feature-circle"></div>
+                <div class="feature-square">IDEA<br>→ FORM</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="section-meta">
+            <div class="section-meta-left">
+                <span class="section-number">06 /</span>
+                <span>Contact</span>
+            </div>
+            <div class="section-meta-right">Have a project in mind?</div>
+        </div>
+
+        <div class="contact-topline">
+            <span>For collaborations & inquiries</span>
+            <span>Let's make something meaningful</span>
+        </div>
+
+        <h2 class="contact-heading reveal">
+            <span>Send your</span>
+            <span>request.</span>
+        </h2>
+
+        <div class="contact-cta-row reveal">
+            <p class="contact-cta-copy">
+                Have a project, collaboration or question? Get in touch and tell me what you are working on.
+            </p>
+
+            <a href="mailto:bitanegahdar@gmail.com" class="contact-cta">
+                <span>Start a conversation</span>
+                <span class="round-arrow" aria-hidden="true">↗</span>
+            </a>
+        </div>
+
+        <div class="contact-grid reveal">
+            <a href="mailto:bitanegahdar@gmail.com" class="contact-item">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">bitanegahdar@gmail.com</span>
+                <span class="contact-arrow">↗</span>
+            </a>
+
+            <a href="tel:+989119382619" class="contact-item">
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">+989119382619</span>
+                <span class="contact-arrow">↗</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/bita-negahdar/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">linkedin.com/in/bita-negahdar/</span>
+                <span class="contact-arrow">↗</span>
+            </a>
+
+            <a href="https://www.instagram.com/bitanegahdar.ir/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <span class="contact-label">Instagram</span>
+                <span class="contact-value">@bitanegahdar.ir</span>
+                <span class="contact-arrow">↗</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>BITA NEGAHDAR © <span id="currentYear">2026</span></div>
+        <div>Design · Identity · Visual Communication</div>
+        <a href="#top">Back to top ↑</a>
+    </footer>
+
+</div>
+
+<script>
+/* MOBILE NAVIGATION */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    menuToggle.textContent = isOpen ? "×" : "+";
+});
+
+navLinks.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "+";
+    });
+});
+
+/* SCROLL REVEAL — works with touch scrolling too */
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: "0px 0px -30px 0px"
+    });
+
+    revealElements.forEach(function (element) {
+        revealObserver.observe(element);
+    });
+} else {
+    revealElements.forEach(function (element) {
+        element.classList.add("is-visible");
+    });
+}
+
+/* DESKTOP CUSTOM CURSOR */
+const customCursor = document.getElementById("customCursor");
+const cursorLabel = document.getElementById("cursorLabel");
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+if (finePointer.matches) {
+    customCursor.style.display = "block";
+
+    window.addEventListener("mousemove", function (event) {
+        customCursor.style.left = event.clientX + "px";
+        customCursor.style.top = event.clientY + "px";
+
+        cursorLabel.style.left = event.clientX + "px";
+        cursorLabel.style.top = event.clientY + "px";
+    });
+
+    document.querySelectorAll("a, button").forEach(function (element) {
+        element.addEventListener("mouseenter", function () {
+            customCursor.classList.add("is-active");
+            cursorLabel.classList.add("is-active");
+        });
+
+        element.addEventListener("mouseleave", function () {
+            customCursor.classList.remove("is-active");
+            cursorLabel.classList.remove("is-active");
+        });
+    });
+}
+
+/* PORTFOLIO SLIDESHOW CONTROLS */
+const portfolioTrack = document.getElementById("portfolioTrack");
+const slidePrev = document.getElementById("slidePrev");
+const slideNext = document.getElementById("slideNext");
+const railProgress = document.getElementById("railProgress");
+
+function getPortfolioStep() {
+    const firstItem = portfolioTrack.querySelector(".portfolio-item");
+    if (!firstItem) return portfolioTrack.clientWidth;
+    const trackStyle = window.getComputedStyle(portfolioTrack);
+    const gap = parseFloat(trackStyle.columnGap || trackStyle.gap) || 0;
+    return firstItem.getBoundingClientRect().width + gap;
+}
+
+slidePrev.addEventListener("click", function () {
+    portfolioTrack.scrollBy({
+        left: -getPortfolioStep(),
+        behavior: "smooth"
+    });
+});
+
+slideNext.addEventListener("click", function () {
+    portfolioTrack.scrollBy({
+        left: getPortfolioStep(),
+        behavior: "smooth"
+    });
+});
+
+function updatePortfolioProgress() {
+    const maxScroll = portfolioTrack.scrollWidth - portfolioTrack.clientWidth;
+    const progress = maxScroll <= 0 ? 100 : (portfolioTrack.scrollLeft / maxScroll) * 100;
+    railProgress.style.width = Math.max(25, Math.min(100, progress + 25)) + "%";
+}
+
+portfolioTrack.addEventListener("scroll", updatePortfolioProgress, { passive: true });
+window.addEventListener("resize", updatePortfolioProgress);
+updatePortfolioProgress();
+
+/* YEAR */
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+/* PAUSE MOVING ELEMENTS WHEN TAB IS HIDDEN */
+document.addEventListener("visibilitychange", function () {
+    document.querySelectorAll(".ticker-track, .skills-track-inner").forEach(function (track) {
+        track.style.animationPlayState = document.hidden ? "paused" : "running";
+    });
+});
+</script>
+</body>
+</html>
