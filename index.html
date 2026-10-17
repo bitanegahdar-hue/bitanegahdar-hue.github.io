@@ -36,6 +36,122 @@
 .floating-quick-grid button.quick-external{border-color:#6e7da9;background:linear-gradient(180deg,#3e4969,#30374c)}
 .floating-quick-grid button.quick-external .quick-fa{color:#dce3ff}
 @media(max-width:650px){.floating-quick-links{top:8px;left:8px;width:190px;padding:7px}.floating-quick-head{margin-bottom:5px;padding-bottom:5px}.floating-quick-head strong{font-size:9px}.floating-quick-head span{font-size:11px}.floating-quick-grid{gap:4px}.floating-quick-grid button{min-height:29px;padding:5px;font-size:9px}.floating-quick-grid button .quick-fa{font-size:10px}.menu-dropdown.open{grid-template-columns:minmax(0,1fr) 118px}.menu-promo{padding:12px}.menu-promo .promo-persian{font-size:14px}}
+
+
+/* Larger, more legible workspace + Quick Links on the right side of the canvas */
+:root{--panel-w:292px;--tool-w:64px}
+html,body{font-size:13px}
+.app{grid-template-rows:40px 34px 42px minmax(0,1fr) 25px}
+.titlebar{gap:12px;padding:0 14px}
+.dot{width:10px;height:10px}
+.appname{font-size:14px}
+.saved{font-size:12px}
+.top-menu{padding:0 12px}
+.top-menu button{height:32px;padding:0 11px;font-size:13px}
+.optionsbar{gap:14px;padding:0 14px;font-size:13px}
+.option-pill{padding:6px 10px}
+.workspace{grid-template-columns:var(--tool-w) minmax(0,1fr) var(--panel-w)}
+.toolbar{padding:7px 0;gap:2px}
+.tool{width:46px;height:39px}
+.tool svg{width:24px;height:24px}
+.tool .tiny{font-size:8px}
+.tool-sep{width:34px;margin:6px 0}
+.swatches{transform:scale(1.08);margin-bottom:10px}
+.doc-tabs{height:33px}
+.doc-tab{padding:0 14px;font-size:13px}
+.canvas-wrap{padding:40px}
+.artboard{width:min(100%,760px);height:min(100%,780px);min-height:360px}
+.placeholder{max-width:430px;padding:34px}
+.placeholder .ps-mark{width:58px;height:49px;font-size:32px}
+.placeholder h1{font-size:clamp(25px,3.2vw,41px)}
+.placeholder p{font-size:13px;line-height:1.8}
+.upload-center{padding:11px 16px;font-size:13px}
+.context-bar{gap:8px;padding:8px}
+.context-bar button{padding:8px 10px;font-size:12px}
+.right-dock{font-size:13px}
+.panel-tabs{height:36px}
+.panel-tabs button{height:35px;padding:0 12px;font-size:12px}
+.panel{padding:14px}
+.panel-head{font-size:13px;margin-bottom:14px}
+.navigator-view{height:120px}
+.navigator-thumb{width:86px;height:91px;font-size:11px}
+.nav-zoom{font-size:12px}
+.layer{padding:8px;min-height:38px;font-size:12px}
+.layer-thumb{width:29px;height:24px}
+.quick-links{gap:7px}
+.quick-links button{padding:10px 8px;font-size:12px}
+.about-copy{font-size:12px;line-height:1.7}
+.statusbar{font-size:11px;padding:0 11px}
+.menu-dropdown{top:70px;width:min(420px,calc(100vw - 24px))}
+.menu-dropdown.open{grid-template-columns:minmax(0,1fr) 158px}
+.menu-promo{padding:18px}
+.menu-promo h3{font-size:16px}
+.menu-promo .promo-persian{font-size:18px;line-height:1.9}
+.menu-promo .promo-body{font-size:11px;line-height:1.7}
+.menu-promo .promo-cta{font-size:11px;padding:8px 11px}
+.menu-actions .menu-action-label{font-size:9px}
+.menu-dropdown .menu-action{font-size:12px;padding:10px}
+.floating-quick-links{top:14px;right:14px;left:auto;width:min(276px,calc(100% - 28px));padding:12px}
+.floating-quick-head{margin-bottom:10px;padding:0 3px 9px}
+.floating-quick-head strong{font-size:12px;letter-spacing:1.2px}
+.floating-quick-head span{font-size:15px}
+.floating-quick-grid{gap:7px}
+.floating-quick-grid button{min-height:40px;padding:8px 10px;font-size:11px}
+.floating-quick-grid button .quick-fa{font-size:14px;line-height:1.5}
+.central-view{padding:clamp(22px,4.2vw,46px)}
+.central-view h2{font-size:clamp(28px,3.4vw,46px)}
+.central-view p{font-size:14px;line-height:1.85}
+.project-grid{gap:18px}
+.project-card span{font-size:14px;padding:13px 14px 4px}
+.project-card small{font-size:11px;padding:0 14px 14px}
+.central-meta span{font-size:11px;padding:8px 11px}
+.section-upload,.site-link,.central-link{font-size:12px;padding:11px 14px}
+@media(max-width:900px){
+ :root{--panel-w:235px;--tool-w:56px}
+ .canvas-wrap{padding:24px}
+ .panel{padding:11px}
+ .floating-quick-links{width:min(250px,calc(100% - 24px));right:12px}
+ .floating-quick-grid button .quick-fa{font-size:13px}
+}
+@media(max-width:650px){
+ .app{grid-template-rows:36px 32px 38px minmax(0,1fr) 23px}
+ .workspace{grid-template-columns:48px minmax(0,1fr)}
+ .toolbar{padding:5px 0}
+ .tool{width:38px;height:35px}
+ .tool svg{width:22px;height:22px}
+ .top-menu{padding:0 5px}
+ .top-menu button{height:30px;padding:0 8px;font-size:12px}
+ .optionsbar{gap:7px;padding:0 7px;font-size:11px}
+ .option-pill{padding:5px 7px}
+ .canvas-wrap{padding:10px}
+ .artboard{min-height:310px;height:100%;width:100%}
+ .floating-quick-links{top:8px;right:8px;left:auto;width:205px;padding:8px}
+ .floating-quick-head{margin-bottom:6px;padding-bottom:6px}
+ .floating-quick-head strong{font-size:10px}
+ .floating-quick-head span{font-size:12px}
+ .floating-quick-grid{gap:5px}
+ .floating-quick-grid button{min-height:34px;padding:6px;font-size:10px}
+ .floating-quick-grid button .quick-fa{font-size:11px;line-height:1.45}
+ .menu-dropdown{top:68px;left:8px;width:min(390px,calc(100vw - 16px))}
+ .menu-dropdown.open{grid-template-columns:minmax(0,1fr) 122px}
+ .menu-promo{padding:12px}
+ .menu-promo h3{font-size:14px}
+ .menu-promo .promo-persian{font-size:15px;line-height:1.8}
+ .menu-promo .promo-body{font-size:10px}
+ .menu-dropdown .menu-action{font-size:11px;padding:8px}
+ .placeholder{padding:18px}
+ .placeholder h1{font-size:24px}
+ .placeholder p{font-size:12px}
+ .context-bar{bottom:10px;gap:5px;padding:6px}
+ .context-bar button{padding:7px;font-size:10px}
+ .central-view{padding:18px}
+ .central-view h2{font-size:28px}
+ .central-view p{font-size:13px}
+ .project-grid{gap:10px}
+ .project-card span{font-size:12px;padding:10px 9px 3px}
+ .project-card small{font-size:10px;padding:0 9px 10px}
+}
+
 </style>
 </head>
 <body>
