@@ -16,6 +16,26 @@
 /* Identity-file properties panel */
 .panel-subtle{font-weight:400;color:#999;font-size:10px}.identity-properties{padding:11px 12px 10px}.identity-file-head{display:flex;align-items:center;gap:9px;padding:2px 0 13px;border-bottom:1px solid #202020}.identity-file-icon{width:37px;height:39px;display:grid;place-items:center;background:#222;border:1px solid #666;color:#9ab7e8;font-weight:700;font-size:16px;letter-spacing:-1px;box-shadow:inset 0 0 0 2px #303030}.identity-file-title{display:flex;flex-direction:column;gap:4px;min-width:0}.identity-file-title strong{font-size:11px;color:#eee;white-space:nowrap}.identity-file-title span{font-size:10px;color:#999}.file-state{margin-left:auto;color:#8cae8a;font-size:8px}.property-group-title{font-size:9px;letter-spacing:1px;color:#a4a4a4;margin:13px 0 7px;font-weight:700}.property-row{display:flex;justify-content:space-between;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid #292929}.property-row span{color:#aaa}.property-row strong{font-weight:500;color:#e0e0e0;text-align:right}.coordinate-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px}.coordinate-grid>div{background:#262626;border:1px solid #202020;padding:6px 7px;display:flex;justify-content:space-between;align-items:center}.coordinate-grid span{color:#999;font-size:10px}.coordinate-grid strong{font-weight:500;color:#e1e1e1;font-size:10px}.signature-color-row{display:flex;align-items:center;gap:8px;background:#282828;border:1px solid #222;padding:7px}.signature-swatch{width:27px;height:27px;background:#caa2a2;border:1px solid #dedede;flex-shrink:0}.signature-color-copy{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}.signature-color-copy strong{font-size:11px;font-weight:500}.signature-color-copy span{font-size:10px;color:#aaa}.mini-edit{background:#3b3b3b;border:1px solid #222;color:#ddd;width:25px;height:25px}.mini-edit:hover{border-color:var(--accent);color:#f2cbd0}.selected-property{border-left:2px solid var(--accent);padding:2px 0 2px 9px;color:#c8c8c8;font-size:11px;line-height:1.55}.selected-property strong{color:#f0d2d6;font-size:12px}.selected-property p{margin:4px 0 0}.property-footnote{font-size:9px;color:#777;margin-top:12px;padding-top:8px;border-top:1px solid #202020;letter-spacing:.1px}
 
+
+/* Visibility and bilingual hierarchy refinements */
+.menu-promo h3{font-size:14px;line-height:1.35;letter-spacing:0;font-weight:500}
+.menu-promo .promo-persian{font-family:Tahoma,Arial,sans-serif;font-size:16px;line-height:1.85;font-weight:600;direction:rtl;text-align:right;color:#f0cbd0;margin:3px 0 13px}
+.menu-promo .promo-body{font-size:10px;line-height:1.55;color:#bdbdbd}
+.menu-promo-kicker{font-size:8px;letter-spacing:1px}
+.menu-promo .promo-cta{font-size:9px}
+.menu-actions .menu-action-label{font-size:8px}
+.menu-dropdown .menu-action{font-size:10px}
+.floating-quick-links{position:absolute;z-index:8;top:12px;left:12px;width:min(238px,calc(100% - 24px));padding:10px;background:rgba(39,39,39,.96);border:1px solid #8b6e73;border-radius:7px;box-shadow:0 7px 24px #0009,0 0 0 1px #caa2a222;backdrop-filter:blur(8px)}
+.floating-quick-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;padding:0 2px 7px;border-bottom:1px solid #57474a}
+.floating-quick-head strong{font-size:11px;letter-spacing:1.1px;color:#f0d9dc;text-transform:uppercase}
+.floating-quick-head span{font-family:Tahoma,Arial,sans-serif;font-size:13px;direction:rtl;color:#e7c5ca}
+.floating-quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.floating-quick-grid button{min-height:32px;padding:7px 8px;text-align:left;border:1px solid #675157;border-radius:4px;background:linear-gradient(180deg,#4b3c40,#393033);color:#f2e6e7;font-size:10px;box-shadow:inset 0 1px #ffffff0c,0 0 9px #caa2a218;transition:background .15s,border-color .15s,box-shadow .15s,transform .15s}
+.floating-quick-grid button:hover,.floating-quick-grid button:focus-visible{background:linear-gradient(180deg,#73565e,#4d3c41);border-color:#e1b9c0;box-shadow:0 0 12px #caa2a266,inset 0 1px #ffffff22;transform:translateY(-1px);color:#fff}
+.floating-quick-grid button .quick-fa{display:block;margin-top:3px;font-family:Tahoma,Arial,sans-serif;font-size:12px;font-weight:600;direction:rtl;text-align:right;color:#f0cbd0}
+.floating-quick-grid button.quick-external{border-color:#6e7da9;background:linear-gradient(180deg,#3e4969,#30374c)}
+.floating-quick-grid button.quick-external .quick-fa{color:#dce3ff}
+@media(max-width:650px){.floating-quick-links{top:8px;left:8px;width:190px;padding:7px}.floating-quick-head{margin-bottom:5px;padding-bottom:5px}.floating-quick-head strong{font-size:9px}.floating-quick-head span{font-size:11px}.floating-quick-grid{gap:4px}.floating-quick-grid button{min-height:29px;padding:5px;font-size:9px}.floating-quick-grid button .quick-fa{font-size:10px}.menu-dropdown.open{grid-template-columns:minmax(0,1fr) 118px}.menu-promo{padding:12px}.menu-promo .promo-persian{font-size:14px}}
 </style>
 </head>
 <body>
@@ -51,6 +71,17 @@
   <section class="stage" aria-label="Document workspace">
    <div class="doc-tabs"><div class="doc-tab"><span id="docName">Bita_Negahdar.jpg</span><small id="docInfo">@ 66.7% (RGB/8)</small></div></div>
    <div class="canvas-wrap" id="canvasWrap">
+    <nav class="floating-quick-links" aria-label="Quick Links">
+     <div class="floating-quick-head"><strong>Quick Links</strong><span>دسترسی سریع</span></div>
+     <div class="floating-quick-grid">
+      <button type="button" data-section="about">About Me<span class="quick-fa">درباره من</span></button>
+      <button type="button" data-section="projects">Projects<span class="quick-fa">پروژه‌ها</span></button>
+      <button type="button" data-section="experience">Experience<span class="quick-fa">تجربه‌ها</span></button>
+      <button type="button" class="quick-external" data-external="https://bitanegahdar.ir">Psychology<span class="quick-fa">روان‌شناسی ↗</span></button>
+      <button type="button" class="quick-external" data-external="https://bitanegahdar.ir">Art & Psychology<span class="quick-fa">هنر و روان‌شناسی ↗</span></button>
+      <button type="button" data-section="contact">Contact<span class="quick-fa">تماس</span></button>
+     </div>
+    </nav>
     <div class="artboard" id="artboard"><img id="heroImage" alt="Uploaded portfolio image" hidden><div class="placeholder" id="placeholder"><div class="ps-mark">Ps</div><h1>BITA NEGAHDAR</h1><p>Graphic Designer · Brand Consultant · Psychology Trainee</p><p style="margin-top:10px">Developing a professional career path in Psychology, Counseling, and Human Resources.</p><button class="upload-center" id="uploadCenter">Open image from your computer</button></div><div class="central-view" id="centralView" aria-live="polite"></div></div>
     <div class="caption-overlay" id="imageCaption">BITA NEGAHDAR</div>
     <div class="context-bar"><button id="changeImage">＋ Add / change image</button><button data-section="about" class="context-link">About</button><button data-section="projects" class="context-link">Projects</button><button data-section="contact" class="context-link">Contact</button></div>
@@ -143,6 +174,7 @@ $$('.tool').forEach(btn=>{btn.addEventListener('click',()=>{$$('.tool').forEach(
 function openUpload(){input.click()}$('#uploadTop').addEventListener('click',openUpload);$('#uploadCenter').addEventListener('click',openUpload);$('#changeImage').addEventListener('click',openUpload);
 input.addEventListener('change',()=>{const file=input.files&&input.files[0];if(!file)return;centralView.classList.remove('visible');centralView.innerHTML='';image.hidden=false;if(!file.type.startsWith('image/')){showToast('Please choose an image file.');return}const url=URL.createObjectURL(file);image.src=url;image.hidden=false;placeholder.style.display='none';image.onload=()=>{$('#profileW').textContent=image.naturalWidth+' px';$('#profileH').textContent=image.naturalHeight+' px';$('#profileX').textContent='0 px';$('#profileY').textContent='0 px'};$('#docName').textContent=file.name;$('#navigatorThumb').innerHTML='';const mini=new Image();mini.src=url;$('#navigatorThumb').appendChild(mini);$('#docInfo').textContent='@ '+$('#zoomValue').textContent+' (RGB/8)';$('#imageCaption').style.display='block';$('#saveStatus').textContent='Image loaded locally';$('#statusText').textContent='Image loaded: '+file.name;showToast('Image loaded into the workspace.');});
 canvasWrap.addEventListener('dragover',e=>{e.preventDefault();canvasWrap.classList.add('dragover')});canvasWrap.addEventListener('dragleave',()=>canvasWrap.classList.remove('dragover'));canvasWrap.addEventListener('drop',e=>{e.preventDefault();canvasWrap.classList.remove('dragover');const f=e.dataTransfer.files[0];if(f&&f.type.startsWith('image/')){const dt=new DataTransfer();dt.items.add(f);input.files=dt.files;input.dispatchEvent(new Event('change'))}});
+$$('[data-external]').forEach(btn=>btn.addEventListener('click',()=>window.open(btn.dataset.external,'_blank','noopener,noreferrer')));
 $$('button[data-section]:not(.tool)').forEach(btn=>{btn.addEventListener('click',()=>{const s=btn.dataset.section;selectSection(s);showToast(sectionInfo[s].name);if(s==='contact'){window.location.href='mailto:bitanegahdar@gmail.com?subject=Portfolio%20inquiry'} });});
 $$('[data-panel]').forEach(btn=>btn.addEventListener('click',()=>{$$('[data-panel]').forEach(b=>b.classList.toggle('active',b===btn));$$('.panel-content').forEach(p=>p.hidden=p.id!=='panel-'+btn.dataset.panel)}));
 $('#zoomRange').addEventListener('input',e=>{const v=Number(e.target.value);$('#zoomValue').textContent=v+'%';$('#docInfo').textContent='@ '+v+'% (RGB/8)';artboard.style.transform='scale('+(v/67)+')';artboard.style.transformOrigin='center center';});
